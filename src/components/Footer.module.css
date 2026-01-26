@@ -1,0 +1,98 @@
+/* Footer.module.css */
+.footer {
+    background-color: #000;
+    color: var(--c-grey-mid);
+    padding: 60px 0 20px;
+    border-top: 1px solid #222;
+    font-size: 0.9rem;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.brandColumn {
+    flex: 1;
+    min-width: 250px;
+}
+
+.logo {
+    color: var(--c-white);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.brandDesc {
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.linksColumn {
+    display: flex;
+    gap: 60px;
+}
+
+.linkGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.linkHeader {
+    color: var(--c-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.link {
+    color: var(--c-grey-mid);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--c-green-acid);
+}
+
+.bottomBar {
+    max-width: var(--max-width);
+    margin: 60px auto 0;
+    padding: 20px 20px 0;
+    border-top: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .linksColumn {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .bottomBar {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}

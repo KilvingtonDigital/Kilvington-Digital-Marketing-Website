@@ -1,0 +1,114 @@
+.section {
+    padding: 120px 0;
+    min-height: 100vh;
+    background-color: var(--c-black);
+    color: var(--c-white);
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--c-white);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--c-grey-mid);
+    margin-bottom: 4rem;
+    max-width: 600px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.infoCard {
+    background: var(--c-charcoal);
+    padding: 40px;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+.infoLabel {
+    color: var(--c-green-acid);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.infoValue {
+    font-size: 1.5rem;
+    color: var(--c-white);
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    color: var(--c-white);
+    font-size: 0.9rem;
+}
+
+.input,
+.textarea {
+    background: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    color: var(--c-white);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--c-green-acid);
+}
+
+.textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submitBtn {
+    background: var(--c-green-acid);
+    color: var(--c-black);
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submitBtn:hover {
+    background: var(--c-white);
+    box-shadow: 0 0 20px rgba(76, 252, 15, 0.4);
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}

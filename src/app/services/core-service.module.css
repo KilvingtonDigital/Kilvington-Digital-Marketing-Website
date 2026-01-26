@@ -1,0 +1,153 @@
+/* Shared styles for Core Pillar Service Pages */
+
+.hero {
+    padding: 180px 0 100px;
+    background-color: var(--c-black);
+    text-align: center;
+    border-bottom: 1px solid var(--c-charcoal);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(76, 252, 15, 0.05) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.label {
+    color: var(--c-green-acid);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.title {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    color: var(--c-white);
+    line-height: 1.1;
+    margin-bottom: 40px;
+    font-family: var(--font-heading);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--c-grey-mid);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.introSection {
+    padding: 100px 0;
+    background: var(--c-charcoal);
+}
+
+.introGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.introHeading {
+    font-size: 2.5rem;
+    color: var(--c-white);
+    margin-bottom: 24px;
+}
+
+.introText {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.featureCard {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #333;
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+    border-color: var(--c-green-acid);
+    transform: translateY(-5px);
+}
+
+.featureTitle {
+    color: var(--c-white);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.featureDesc {
+    color: var(--c-grey-mid);
+    line-height: 1.6;
+}
+
+.benefitSection {
+    padding: 100px 0;
+    background: var(--c-black);
+}
+
+.benefitList {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    color: var(--c-white);
+    font-size: 1.1rem;
+    padding: 20px;
+    border-left: 2px solid var(--c-green-acid);
+    background: linear-gradient(90deg, rgba(76, 252, 15, 0.05) 0%, transparent 100%);
+}
+
+.ctaSection {
+    text-align: center;
+    padding: 100px 0;
+    border-top: 1px solid #222;
+}
+
+@media (max-width: 900px) {
+    .introGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .benefitList {
+        grid-template-columns: 1fr;
+    }
+}

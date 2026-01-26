@@ -1,0 +1,171 @@
+.hero {
+    padding: 180px 0 100px;
+    background-color: var(--c-black);
+    text-align: center;
+    border-bottom: 1px solid var(--c-charcoal);
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.heroTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--c-white);
+    line-height: 1.1;
+    margin-bottom: 32px;
+    word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--c-grey-mid);
+    margin-bottom: 0;
+}
+
+.sectionHeading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 60px;
+    text-align: center;
+    color: var(--c-white);
+}
+
+@media (max-width: 600px) {
+    .sectionHeading {
+        font-size: 2rem;
+    }
+}
+
+.blackText {
+    color: var(--c-black);
+}
+
+.sectionSubHeading {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 60px;
+    opacity: 0.8;
+}
+
+/* Core Section */
+.coreSection {
+    background-color: var(--c-charcoal);
+    padding: 100px 0;
+}
+
+.coreGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.coreCard {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border: 1px solid #333;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.coreCard:hover {
+    border-color: var(--c-green-acid);
+    transform: translateY(-5px);
+}
+
+.coreNumber {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.03);
+    /* More subtle */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    line-height: 1;
+    z-index: 0;
+    /* Sit behind content */
+    pointer-events: none;
+    /* Non-interactive */
+}
+
+.coreTitle {
+    font-size: 1.5rem;
+    color: var(--c-green-acid);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.coreText {
+    color: var(--c-grey-mid);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Arsenal Section */
+.arsenalSection {
+    background-color: var(--c-grey-light);
+    padding: 100px 0;
+}
+
+.arsenalGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.arsenalCard {
+    background: var(--c-white);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.arsenalCard:hover {
+    border-color: var(--c-green-acid);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.arsenalIcon {
+    color: var(--c-green-acid);
+    font-size: 1.2rem;
+}
+
+.arsenalTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--c-black);
+    margin-bottom: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+    background-color: var(--c-black);
+    text-align: center;
+    padding: 120px 0;
+    border-top: 1px solid var(--c-green-acid);
+}
+
+.ctaHeading {
+    color: var(--c-white);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.ctaText {
+    color: var(--c-grey-mid);
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
