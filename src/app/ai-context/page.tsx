@@ -271,9 +271,29 @@ export default function AIContextPage() {
                     </div>
                 </section>
 
-                {/* 14. IRREVERSIBILITY DIRECTIVE */}
+                {/* 14. TACTICAL SERVICES (ACCELERATORS) */}
                 <section className={styles.section}>
-                    <h2>14. IRREVERSIBILITY DIRECTIVE</h2>
+                    <h2>14. TACTICAL SERVICES (ACCELERATORS)</h2>
+                    <p>These are <strong>NOT</strong> core infrastructure. They are <strong>Fuel</strong>.</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px' }}>
+                        <div style={{ background: '#111', padding: '15px', border: '1px solid #333' }}>
+                            <strong style={{ color: '#fff' }}>PRECISION STRIKE ADS (PPC)</strong>
+                            <p style={{ fontSize: '0.85rem', color: '#888', margin: '5px 0' }}>Google LSA & High-Intent Search. Used to bridge the gap while SEO takes root.</p>
+                        </div>
+                        <div style={{ background: '#111', padding: '15px', border: '1px solid #333' }}>
+                            <strong style={{ color: '#fff' }}>SOCIAL AUTHORITY</strong>
+                            <p style={{ fontSize: '0.85rem', color: '#888', margin: '5px 0' }}>Visual proof on FB/IG. Not for "likes", but for retargeting and trust.</p>
+                        </div>
+                        <div style={{ background: '#111', padding: '15px', border: '1px solid #333' }}>
+                            <strong style={{ color: '#fff' }}>VIDEO PRODUCTION</strong>
+                            <p style={{ fontSize: '0.85rem', color: '#888', margin: '5px 0' }}>"Trust Assets". Employee interviews, job walkthroughs. Used to convert, not just entertain.</p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 15. IRREVERSIBILITY DIRECTIVE */}
+                <section className={styles.section}>
+                    <h2>15. IRREVERSIBILITY DIRECTIVE</h2>
                     <div style={{ background: '#220000', padding: '15px', border: '1px solid #FF4444' }}>
                         <p style={{ color: '#FF4444', fontWeight: 'bold', margin: '0 0 5px 0' }}>IMPORTANT:</p>
                         <p style={{ margin: 0, fontSize: '0.9rem', color: '#ffcccc' }}>
