@@ -104,7 +104,7 @@ export default function AIContextPage() {
                             </ul>
                         </div>
                         <div>
-                            <h4 style={{ borderBottom: '1px solid #333' }}>HARNETT COUNTY (SAMPLE):</h4>
+                            <h4 style={{ borderBottom: '1px solid #333' }}>MOORE COUNTY (SAMPLE):</h4>
                             <ul style={{ fontSize: '0.85rem', listStyle: 'none', padding: 0 }}>
                                 <li>Tree Service: <span style={{ color: 'var(--c-green-acid)' }}>OPEN</span></li>
                                 <li>Fence Installation: <span style={{ color: 'var(--c-green-acid)' }}>OPEN</span></li>

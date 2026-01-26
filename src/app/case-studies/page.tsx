@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './case-studies.module.css';
 
 export const metadata: Metadata = {
@@ -23,11 +24,13 @@ export default function CaseStudiesListing() {
                 <div className={styles.grid}>
                     {/* Case Study Card 1: Apex Tree */}
                     <div className={styles.card}>
-                        <div className={styles.cardImage}>
-                            {/* Placeholder for image, or we could use next/image if we had one. 
-                                Using text for now to keep it clean without broken images. 
-                            */}
-                            <span style={{ color: '#444', fontWeight: 'bold' }}>APEX VISUAL</span>
+                        <div className={styles.cardImage} style={{ position: 'relative', background: '#000' }}>
+                            <Image
+                                src="/images/case-studies/apex-tree-logo.png"
+                                alt="Apex Tree Company Logo"
+                                fill
+                                style={{ objectFit: 'contain', padding: '40px' }}
+                            />
                         </div>
                         <div className={styles.cardContent}>
                             <div className={styles.industryTag}>Tree Service / Arborist</div>
@@ -55,7 +58,7 @@ export default function CaseStudiesListing() {
                         <div className={styles.cardImage} style={{ background: '#111' }}></div>
                         <div className={styles.cardContent}>
                             <div className={styles.industryTag}>Coming Soon</div>
-                            <h2 className={styles.cardTitle} style={{ color: '#555' }}>Harnett County Project</h2>
+                            <h2 className={styles.cardTitle} style={{ color: '#555' }}>Moore County Project</h2>
                             <div className={styles.cardStats} style={{ borderColor: '#222' }}>
                                 <div className={styles.stat}>
                                     <span className={styles.statValue} style={{ color: '#555' }}>---</span>
