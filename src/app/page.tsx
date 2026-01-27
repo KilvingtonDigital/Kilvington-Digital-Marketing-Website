@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import RoiChart from '../components/RoiChart';
 import FooterCTA from '../components/FooterCTA';
+import Marquee from '../components/Marquee';
 
 export default function Home() {
   return (
@@ -43,6 +44,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Marquee
+        items={[
+          'Establish Digital Dominance',
+          'Secure Your Territory',
+          'ROI Driven Systems',
+          'AI Revenue Agents Online',
+          'Exclusive Partnership Model'
+        ]}
+        speed={40}
+      />
 
       {/* Owner Trust Section */}
       <section className={`section ${styles.ownerSection}`}>
