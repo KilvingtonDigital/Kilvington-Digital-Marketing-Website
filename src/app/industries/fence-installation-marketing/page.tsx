@@ -55,7 +55,7 @@ export default function FenceInstallationPage() {
                         </div>
                         <div>
                             <Image
-                                src="/images/fence-marketing-hero.png"
+                                src="/images/fence-installation-marketing-lead-generation.png"
                                 alt="Fence Marketing Data Visualization"
                                 width={600}
                                 height={400}
