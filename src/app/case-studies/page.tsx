@@ -24,14 +24,19 @@ export default function CaseStudiesListing() {
                 <div className={styles.grid}>
                     {/* Case Study Card 1: Apex Tree */}
                     <div className={styles.card}>
-                        <div className={`${styles.cardImage} ${styles.cardImageRelative}`}>
+                        <a
+                            href="https://apextreecompany.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`${styles.cardImage} ${styles.cardImageRelative}`}
+                        >
                             <Image
                                 src="/images/case-studies/apex-tree-company-logo-marketing-results.png"
                                 alt="Apex Tree Company Logo Marketing Results"
                                 fill
                                 className={styles.objectContain}
                             />
-                        </div>
+                        </a>
                         <div className={styles.cardContent}>
                             <div className={styles.industryTag}>Tree Service / Arborist</div>
                             <h2 className={styles.cardTitle}>Apex Tree Company</h2>

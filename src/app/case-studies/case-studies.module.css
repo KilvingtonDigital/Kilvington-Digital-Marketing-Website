@@ -48,6 +48,7 @@
     position: relative;
     border-bottom: 1px solid #333;
     overflow: hidden;
+    display: block;
 }
 
 .objectContain {
