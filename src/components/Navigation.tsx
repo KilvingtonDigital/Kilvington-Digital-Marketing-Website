@@ -40,10 +40,10 @@ export default function Navigation() {
                         <Image
                             src="/images/kilvington-digital-marketing-logo-white.png"
                             alt="Kilvington Digital"
-                            width={240}
-                            height={40}
+                            width={320}
+                            height={60}
                             priority
-                            style={{ height: 'auto', width: 'auto', maxHeight: '40px' }}
+                            style={{ width: 'auto', height: '55px' }}
                         />
                     </Link>
 
