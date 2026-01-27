@@ -62,7 +62,7 @@ export default function Home() {
           <div className={styles.ownerImageWrapper}>
             <Image
               src="/images/ricky-kilvington-digital-marketing-founder.png"
-              alt="Ricky Kilvington Digital Marketing Founder"
+              alt="Ricky Whittaker Digital Marketing Founder"
               fill
               className={styles.ownerImage}
             />
@@ -73,7 +73,7 @@ export default function Home() {
               &quot;ROI is the only metric that matters. It isn&apos;t just about brand awareness; it&apos;s about converting business leads into strong revenue.&quot;
             </blockquote>
             <p className={`${styles.textLg} ${styles.ownerInfo}`}>
-              <strong>Ricky Kilvington</strong><br />
+              <strong>Ricky Whittaker</strong><br />
               <span className={styles.accentText}>Founder & Lead Strategist</span>
             </p>
           </div>
