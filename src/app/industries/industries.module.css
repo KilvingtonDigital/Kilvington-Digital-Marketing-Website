@@ -1,0 +1,177 @@
+/* Industries Specific Styles */
+
+.pageWrapper {
+    background-color: var(--c-black);
+    min-height: 100vh;
+}
+
+.hero {
+    padding: 160px 0 80px;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(30, 30, 30, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    border-bottom: 1px solid #222;
+}
+
+.label {
+    color: var(--c-green-acid);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--c-white);
+    margin-bottom: 24px;
+    line-height: 1.1;
+    font-family: var(--font-heading);
+}
+
+.subtitle {
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Poster Grid Layout */
+.industrySection {
+    padding: 80px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    height: 500px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid #333;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    isolation: isolate;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--c-green-acid);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cardImage {
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: grayscale(100%) brightness(0.6);
+}
+
+.card:hover .cardImage {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(0.8);
+}
+
+/* Gradient Overlay for Text Readability */
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+    z-index: 2;
+}
+
+.cardContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    z-index: 3;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+
+.cardTitle {
+    font-size: 1.8rem;
+    color: var(--c-white);
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cardDesc {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    /* Optional: Hide description until hover if desired, but visible is better for UX */
+}
+
+.cardAction {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--c-green-acid);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.card:hover .cardAction {
+    border-color: var(--c-green-acid);
+}
+
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .card {
+        height: 400px;
+        /* Slightly shorter on mobile */
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

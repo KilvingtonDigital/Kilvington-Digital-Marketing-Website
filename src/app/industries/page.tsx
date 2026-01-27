@@ -1,20 +1,76 @@
-
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../services/core-service.module.css';
+import styles from './industries.module.css';
 
 export const metadata: Metadata = {
     title: "Industries | Kilvington Digital Marketing",
     description: "Specialized digital marketing infrastructure for high-value service industries. Tree Service, Fencing, Home Building, and more.",
 };
 
+const industries = [
+    {
+        title: "TREE SERVICES",
+        href: "/industries/tree-service-marketing",
+        image: "/images/tree-service-marketing-arborist-lead-generation.png",
+        desc: "For arborists who want high-ticket removals and storm work, not just hedge trimming."
+    },
+    {
+        title: "FENCE INSTALLATION",
+        href: "/industries/fence-installation-marketing",
+        image: "/images/fence-installation-marketing-lead-generation.png",
+        desc: "Dominate the HOA privacy fence market and secure high-margin commercial perimeter jobs."
+    },
+    {
+        title: "CUSTOM HOME BUILDERS",
+        href: "/industries/custom-home-builder-marketing",
+        image: "/images/custom-home-builder-marketing-luxury-construction-leads.png",
+        desc: "Build trust and prestige for multi-million dollar projects. Long-game nurture for luxury buyers."
+    },
+    {
+        title: "ROOFING & STORM",
+        href: "/industries/roofing-marketing",
+        image: "/images/roofing-marketing-storm-damage-leads-system.png",
+        desc: "Capture high-value insurance claims and retail replacements with \"Storm Response\" site infrastructure."
+    },
+    {
+        title: "HVAC SERVICES",
+        href: "/industries/hvac-marketing",
+        image: "/images/hvac-contractor-marketing-ac-repair-leads.png",
+        desc: "Win the race for \"AC Repair\" with high-speed mobile pages and automated booking agents."
+    },
+    {
+        title: "EPOXY FLOORING",
+        href: "/industries/epoxy-flooring-marketing",
+        image: "/images/epoxy-flooring-contractor-marketing-system.png",
+        desc: "Use portfolio-driven design to sell high-margin garage and commercial floor coatings."
+    },
+    {
+        title: "SPRAY FOAM",
+        href: "/industries/spray-foam-insulation-marketing",
+        image: "/images/spray-foam-insulation-marketing-leads.png",
+        desc: "Educate homeowners on energy ROI and dominate the crawl space encapsulation market."
+    },
+    {
+        title: "LAND CLEARING",
+        href: "/industries/land-clearing-marketing",
+        image: "/images/land-clearing-forestry-mulching-marketing.png",
+        desc: "Connect with developers and builders. Win forestry mulching and grading contracts."
+    },
+    {
+        title: "MOLD REMEDIATION",
+        href: "/industries/mold-remediation-marketing",
+        image: "/images/mold-remediation-marketing-water-damage-leads.png",
+        desc: "Capture urgent \"Black Mold\" searches. Position your brand as the health authority homeowners trust."
+    }
+];
+
 export default function IndustriesHubPage() {
     return (
-        <div className="page-wrapper">
+        <div className={styles.pageWrapper}>
             {/* Hero */}
             <section className={styles.hero}>
-                <div className={`container ${styles.heroContent}`}>
+                <div className={styles.container}>
                     <span className={styles.label}>SECTOR EXPERTISE</span>
                     <h1 className={styles.title}>CHOOSE YOUR INDUSTRY</h1>
                     <p className={styles.subtitle}>
@@ -24,176 +80,32 @@ export default function IndustriesHubPage() {
                 </div>
             </section>
 
-            {/* Industry Grid */}
-            <section className={`${styles.introSection} ${styles.industrySection}`}>
-                <div className="container">
-                    <div className={styles.industryGrid}>
-
-                        {/* Tree Service Card */}
-                        <Link href="/industries/tree-service-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/tree-service-marketing-hero.png"
-                                    alt="Tree Service Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>TREE SERVICES</h3>
-                            <p className={styles.featureDesc}>
-                                For arborists who want high-ticket removals and storm work, not just hedge trimming.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* Fence Installation Card */}
-                        <Link href="/industries/fence-installation-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/fence-marketing-hero.png"
-                                    alt="Fence Installation Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>FENCE INSTALLATION</h3>
-                            <p className={styles.featureDesc}>
-                                Dominate the HOA privacy fence market and secure high-margin commercial perimeter jobs.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* Custom Home Builder Card */}
-                        <Link href="/industries/custom-home-builder-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/home-builder-marketing-hero.png"
-                                    alt="Custom Home Builder Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>CUSTOM HOME BUILDERS</h3>
-                            <p className={styles.featureDesc}>
-                                Build trust and prestige for multi-million dollar projects. Long-game nurture for luxury buyers.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* Roofing Card */}
-                        <Link href="/industries/roofing-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/roofing-marketing-hero.png"
-                                    alt="Roofing Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>ROOFING & STORM</h3>
-                            <p className={styles.featureDesc}>
-                                Capture high-value insurance claims and retail replacements with &quot;Storm Response&quot; site infrastructure.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* HVAC Card */}
-                        <Link href="/industries/hvac-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/hvac-marketing-hero.png"
-                                    alt="HVAC Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>HVAC SERVICES</h3>
-                            <p className={styles.featureDesc}>
-                                Win the race for &quot;AC Repair&quot; with high-speed mobile pages and automated booking agents.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* Epoxy Card */}
-                        <Link href="/industries/epoxy-flooring-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/epoxy-flooring-marketing-hero.png"
-                                    alt="Epoxy Flooring Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>EPOXY FLOORING</h3>
-                            <p className={styles.featureDesc}>
-                                Use portfolio-driven design to sell high-margin garage and commercial floor coatings.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* Spray Foam Card */}
-                        <Link href="/industries/spray-foam-insulation-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/spray-foam-marketing-hero.png"
-                                    alt="Spray Foam Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>SPRAY FOAM</h3>
-                            <p className={styles.featureDesc}>
-                                Educate homeowners on energy ROI and dominate the crawl space encapsulation market.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* Land Clearing Card */}
-                        <Link href="/industries/land-clearing-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/land-clearing-marketing-hero.png"
-                                    alt="Land Clearing Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>LAND CLEARING</h3>
-                            <p className={styles.featureDesc}>
-                                Connect with developers and builders. Win forestry mulching and grading contracts.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
-                        {/* Mold Remediation Card */}
-                        <Link href="/industries/mold-remediation-marketing" className={styles.industryCard}>
-                            <div className={styles.industryImageWrapper}>
-                                <Image
-                                    src="/images/mold-remediation-marketing-hero.png"
-                                    alt="Mold Remediation Marketing"
-                                    fill
-                                    className={styles.industryImage}
-                                />
-                            </div>
-                            <h3 className={styles.featureTitle}>MOLD REMEDIATION</h3>
-                            <p className={styles.featureDesc}>
-                                Capture urgent &quot;Black Mold&quot; searches. Position your brand as the health authority homeowners trust.
-                            </p>
-                            <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
-                        </Link>
-
+            {/* Poster Grid */}
+            <section className={styles.industrySection}>
+                <div className={styles.container}>
+                    <div className={styles.grid}>
+                        {industries.map((industry) => (
+                            <Link key={industry.title} href={industry.href} className={styles.card}>
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src={industry.image}
+                                        alt={`${industry.title} Marketing Strategy`}
+                                        fill
+                                        className={styles.cardImage}
+                                        priority={industry.title === "TREE SERVICES"} // Prioritize first image
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
+                                </div>
+                                <div className={styles.cardContent}>
+                                    <h3 className={styles.cardTitle}>{industry.title}</h3>
+                                    <p className={styles.cardDesc}>{industry.desc}</p>
+                                    <span className={styles.cardAction}>
+                                        Explore Strategy <span className={styles.arrow}>→</span>
+                                    </span>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className={styles.ctaSection}>
-                <div className="container">
-                    <h2 className={styles.introHeading}>DON&apos;T SEE YOUR INDUSTRY?</h2>
-                    <p className={styles.subtitle}>
-                        We occasionally accept partners in other high-ticket verticals if the economics make sense.
-                    </p>
-                    <Link href="/contact" className="btn btn-primary">INQUIRE ABOUT AVAILABILITY</Link>
                 </div>
             </section>
         </div>
