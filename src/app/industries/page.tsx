@@ -33,7 +33,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/tree-service-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/tree-service-marketing-hero.png"
+                                    src="/images/tree-service-marketing-arborist-lead-generation.png"
                                     alt="Tree Service Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -50,7 +50,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/fence-installation-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/fence-marketing-hero.png"
+                                    src="/images/fence-installation-marketing-lead-generation.png"
                                     alt="Fence Installation Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -67,7 +67,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/custom-home-builder-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/home-builder-marketing-hero.png"
+                                    src="/images/custom-home-builder-marketing-luxury-construction-leads.png"
                                     alt="Custom Home Builder Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -84,7 +84,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/roofing-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/roofing-marketing-hero.png"
+                                    src="/images/roofing-marketing-storm-damage-leads-system.png"
                                     alt="Roofing Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -101,7 +101,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/hvac-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/hvac-marketing-hero.png"
+                                    src="/images/hvac-contractor-marketing-ac-repair-leads.png"
                                     alt="HVAC Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -118,7 +118,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/epoxy-flooring-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/epoxy-flooring-marketing-hero.png"
+                                    src="/images/epoxy-flooring-contractor-marketing-system.png"
                                     alt="Epoxy Flooring Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -135,7 +135,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/spray-foam-insulation-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/spray-foam-marketing-hero.png"
+                                    src="/images/spray-foam-insulation-marketing-leads.png"
                                     alt="Spray Foam Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -152,7 +152,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/land-clearing-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/land-clearing-marketing-hero.png"
+                                    src="/images/land-clearing-forestry-mulching-marketing.png"
                                     alt="Land Clearing Marketing"
                                     fill
                                     className={styles.industryImage}
@@ -169,7 +169,7 @@ export default function IndustriesHubPage() {
                         <Link href="/industries/mold-remediation-marketing" className={styles.industryCard}>
                             <div className={styles.industryImageWrapper}>
                                 <Image
-                                    src="/images/mold-remediation-marketing-hero.png"
+                                    src="/images/mold-remediation-marketing-water-damage-leads.png"
                                     alt="Mold Remediation Marketing"
                                     fill
                                     className={styles.industryImage}
