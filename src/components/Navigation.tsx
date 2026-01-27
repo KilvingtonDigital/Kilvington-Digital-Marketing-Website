@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Navigation.module.css';
 import TerritoryModal from './TerritoryModal';
@@ -37,14 +36,7 @@ export default function Navigation() {
             <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
                 <div className={styles.container}>
                     <Link href="/" className={styles.logo}>
-                        <Image
-                            src="/images/kilvington-digital-marketing-logo-white.png"
-                            alt="Kilvington Digital"
-                            width={320}
-                            height={60}
-                            priority
-                            style={{ width: 'auto', height: '55px' }}
-                        />
+                        KILVINGTON DIGITAL<span className={styles.dot}>.</span>
                     </Link>
 
                     {/* Desktop Links */}
