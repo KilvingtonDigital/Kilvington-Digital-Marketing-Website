@@ -5,8 +5,8 @@ import Link from 'next/link';
 import styles from './about.module.css';
 
 export const metadata: Metadata = {
-    title: "About Us | Kilvington Digital Marketing",
-    description: "The Anti-Agency. We build digital infrastructure for tradesmen who are tired of empty marketing promises.",
+    title: "About Kilvington Digital | The Anti-Agency for NC Trades",
+    description: "We are infrastructure architects, not a marketing agency. We build exclusive, permanent digital assets for one partner per territory in North Carolina.",
 };
 
 export default function AboutPage() {

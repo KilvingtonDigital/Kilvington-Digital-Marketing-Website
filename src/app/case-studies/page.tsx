@@ -4,8 +4,8 @@ import Image from 'next/image';
 import styles from './case-studies.module.css';
 
 export const metadata: Metadata = {
-    title: "Case Studies | Results & ROI",
-    description: "Real-world examples of how Kilvington Digital Marketing generates exclusive dominance for local service businesses.",
+    title: "Digital Marketing Case Studies & ROI Reports | Kilvington",
+    description: "Verified results: See how our Territory-Exclusive infrastructure generated 1,600% ROI for NC Tree Service and Home Service businesses.",
 };
 
 export default function CaseStudiesListing() {

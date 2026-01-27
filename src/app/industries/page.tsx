@@ -4,8 +4,8 @@ import Link from 'next/link';
 import styles from './industries.module.css';
 
 export const metadata: Metadata = {
-    title: "Industries | Kilvington Digital Marketing",
-    description: "Specialized digital marketing infrastructure for high-value service industries. Tree Service, Fencing, Home Building, and more.",
+    title: "Marketing for High-Ticket Trade Industries | Kilvington Digital",
+    description: "Specialized revenue infrastructure for Tree Services, Roofing, HVAC, and Custom Builders. Select your sector to see our dominance strategy.",
 };
 
 const industries = [

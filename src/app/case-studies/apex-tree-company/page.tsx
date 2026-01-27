@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './apex-tree.module.css';
 import RoiChart from '../../../components/RoiChart';
+import CaseStudySchema from '../../../components/CaseStudySchema';
 
 export const metadata: Metadata = {
     title: "Case Studies | Apex Tree Company ROI",
@@ -11,6 +12,13 @@ export const metadata: Metadata = {
 export default function ApexTreeCaseStudy() {
     return (
         <div className="page-wrapper">
+            <CaseStudySchema
+                clientName="Apex Tree Company"
+                serviceName="Exclusive Digital Infrastructure"
+                outcome="Generated 1,600% Monthly ROI and 14x Lead Increase"
+                reviewRating={5}
+                reviewBody="We're thrilled with the results. The significant increase in qualified leads and conversions has made a real difference to our business."
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className="container">
