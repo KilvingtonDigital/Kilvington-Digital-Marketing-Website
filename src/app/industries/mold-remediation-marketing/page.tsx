@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Exclusive digital marketing for Mold Removal & Restoration companies. High-intent lead generation for urgent health hazards.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function MoldRemediationPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="Mold Remediation Marketing"
+                description="Exclusive digital marketing for Mold Removal & Restoration companies. High-intent lead generation for urgent health hazards."
+                url="https://kilvington.digital/industries/mold-remediation-marketing"
+                serviceType="Digital Marketing for Mold Remediation"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -32,32 +40,26 @@ export default function MoldRemediationPage() {
                         <div>
                             <h2 className={styles.introHeading}>URGENCY + AUTHORITY.</h2>
                             <p className={styles.introText}>
-                                When a homeowner finds black mold, they don't shop for price. They shop for speed and certainty.
-                                We build "Health-First" funnels that convert panicked searches into high-ticket remediation jobs.
+                                When a homeowner finds black mold, they don&apos;t shop for price. They shop for speed and certainty.
+                                We build &quot;Health-First&quot; funnels that convert panicked searches into high-ticket remediation jobs.
                             </p>
                             <p className={styles.introText}>
                                 From crawl space encapsulation in <strong>Wake County</strong> to toxic mold testing in <strong>Mecklenburg County</strong>, we ensure you are the verified expert.
                             </p>
-                            <div style={{ marginTop: '30px', padding: '20px', borderLeft: '3px solid var(--c-green-acid)', background: 'rgba(255,255,255,0.05)' }}>
-                                <strong style={{ color: 'var(--c-white)', display: 'block', marginBottom: '10px' }}>THE EXCLUSIVE PARTNER PROMISE</strong>
-                                <p style={{ color: '#ccc', margin: 0 }}>
+                            <div className={styles.promiseBox}>
+                                <strong className={styles.promiseTitle}>THE EXCLUSIVE PARTNER PROMISE</strong>
+                                <p className={styles.promiseText}>
                                     We represent ONE remediation company per territory.
                                 </p>
                             </div>
                         </div>
                         <div>
                             <Image
-                                src="/images/mold-remediation-marketing-hero.png"
-                                alt="Mold Remediation Marketing Data Visualization"
+                                src="/images/mold-remediation-marketing-water-damage-leads.png"
+                                alt="Mold Remediation Marketing Water Damage Leads"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>
@@ -67,7 +69,7 @@ export default function MoldRemediationPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>EDUCATIONAL CONTENT</h3>
                             <p className={styles.featureDesc}>
-                                We rank for symptoms ("black mold symptoms") to catch the customer before they even know they need a pro.
+                                We rank for symptoms (&quot;black mold symptoms&quot;) to catch the customer before they even know they need a pro.
                             </p>
                         </div>
                         <div className={styles.featureCard}>
@@ -79,7 +81,7 @@ export default function MoldRemediationPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>TESTING & PROTOCOLS</h3>
                             <p className={styles.featureDesc}>
-                                We highlight your certifications (IICRC) to prove you aren't just a guy with a bucket of bleach.
+                                We highlight your certifications (IICRC) to prove you aren&apos;t just a guy with a bucket of bleach.
                             </p>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ export default function Footer() {
             <div className={styles.container}>
                 <div className={styles.brandColumn}>
                     <Link href="/" className={styles.logo}>
-                        KILVINGTON DIGITAL<span style={{ color: 'var(--c-green-acid)' }}>.</span>
+                        KILVINGTON DIGITAL<span className={styles.dot}>.</span>
                     </Link>
                     <p className={styles.brandDesc}>
                         Exclusive digital infrastructure for growth-focused businesses. One partner per territory.

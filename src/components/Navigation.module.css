@@ -33,6 +33,8 @@
     color: var(--c-white);
     text-transform: uppercase;
     letter-spacing: 1px;
+    position: relative;
+    z-index: 1002;
 }
 
 .links {
@@ -83,12 +85,18 @@
     text-transform: uppercase;
     font-size: 0.85rem;
     transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .cta:hover {
     background: var(--c-green-acid);
     color: var(--c-black);
     box-shadow: 0 0 15px rgba(76, 252, 15, 0.4);
+}
+
+.dot {
+    color: var(--c-green-acid);
 }
 
 /* Mobile Menu */
@@ -138,6 +146,16 @@
 
 .mobileLink:hover {
     color: var(--c-green-acid);
+}
+
+.mobileCta {
+    color: var(--c-green-acid);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 @media (max-width: 900px) {

@@ -35,8 +35,8 @@ export default function Navigation() {
         <>
             <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
                 <div className={styles.container}>
-                    <Link href="/" className={styles.logo} style={{ zIndex: 1002, position: 'relative' }}>
-                        KILVINGTON DIGITAL<span style={{ color: 'var(--c-green-acid)' }}>.</span>
+                    <Link href="/" className={styles.logo}>
+                        KILVINGTON DIGITAL<span className={styles.dot}>.</span>
                     </Link>
 
                     {/* Desktop Links */}
@@ -62,7 +62,6 @@ export default function Navigation() {
                         <button
                             onClick={() => setIsModalOpen(true)}
                             className={styles.cta}
-                            style={{ cursor: 'pointer', fontFamily: 'inherit' }}
                         >
                             Territory Check
                         </button>

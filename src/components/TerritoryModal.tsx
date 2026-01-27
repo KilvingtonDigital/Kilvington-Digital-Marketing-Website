@@ -132,7 +132,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
             } else {
                 alert('Failed to send request. Please try again.');
             }
-        } catch (error) {
+        } catch (_error) {
             alert('An error occurred. Please try again later.');
         }
     };
@@ -174,7 +174,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                         />
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div className={styles.gridRow}>
                         <div className={styles.formGroup}>
                             <label className={styles.label}>Industry</label>
                             <select
@@ -182,7 +182,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                                 className={styles.input}
                                 required
                                 onChange={handleIndustryChange}
-                                style={{ backgroundColor: '#111', color: '#fff' }}
+                                aria-label="Select Industry"
                             >
                                 <option value="">Select Industry...</option>
                                 <option value="Tree Service">Tree Service</option>
@@ -201,8 +201,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                                     type="text"
                                     name="customIndustry"
                                     placeholder="Enter Industry..."
-                                    className={styles.input}
-                                    style={{ marginTop: '10px', fontSize: '0.9rem' }}
+                                    className={`${styles.input} ${styles.customInput}`}
                                     required
                                     onChange={handleChange}
                                 />
@@ -215,7 +214,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                                 className={styles.input}
                                 required
                                 onChange={handleCountyChange}
-                                style={{ backgroundColor: '#111', color: '#fff' }}
+                                aria-label="Select County"
                             >
                                 <option value="">Select County...</option>
                                 <option value="Alamance County">Alamance County</option>
@@ -325,8 +324,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                                     type="text"
                                     name="customCounty"
                                     placeholder="Enter City/State..."
-                                    className={styles.input}
-                                    style={{ marginTop: '10px', fontSize: '0.9rem' }}
+                                    className={`${styles.input} ${styles.customInput}`}
                                     required
                                     onChange={handleChange}
                                 />
@@ -335,23 +333,19 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                     </div>
 
                     {territoryStatus && (
-                        <div style={{
-                            padding: '10px',
-                            marginBottom: '20px',
-                            border: `1px solid ${territoryStatus.color}`,
-                            color: territoryStatus.color,
-                            backgroundColor: 'rgba(0,0,0,0.3)',
-                            fontSize: '0.85rem',
-                            fontWeight: 'bold',
-                            textAlign: 'center',
-                            borderRadius: '4px'
-                        }}>
+                        <div
+                            className={styles.statusBox}
+                            style={{
+                                borderColor: territoryStatus.color,
+                                color: territoryStatus.color
+                            }}
+                        >
                             {territoryStatus.message}
                         </div>
                     )}
 
                     <div className={styles.formGroup}>
-                        <label className={styles.label}>Website URL <span style={{ color: '#666', fontWeight: 400 }}>(Optional)</span></label>
+                        <label className={styles.label}>Website URL <span className={styles.labelOptional}>(Optional)</span></label>
                         <input
                             type="text"
                             name="website"
@@ -361,7 +355,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                         />
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div className={styles.gridRow}>
                         <div className={styles.formGroup}>
                             <label className={styles.label}>Email Address</label>
                             <input

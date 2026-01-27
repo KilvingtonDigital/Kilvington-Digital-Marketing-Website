@@ -19,26 +19,26 @@ export default function AboutPage() {
                         <span className={styles.label}>OUR MISSION</span>
                         <h1 className={styles.title}>THE ANTI-AGENCY.</h1>
                         <p className={styles.subtitle}>
-                            We were founded on a simple truth: <strong>Most digital marketing agencies are scams.</strong> They sell retainers, not results. They lease you a website you don't own. We are here to kill that model.
+                            We were founded on a simple truth: <strong>Most digital marketing agencies are scams.</strong> They sell retainers, not results. They lease you a website you don&apos;t own. We are here to kill that model.
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* Mission / Story Grid */}
-            <section style={{ paddingBottom: '100px' }}>
+            <section className={styles.missionSection}>
                 <div className="container">
                     <div className={styles.grid}>
                         <div className={styles.missionContent}>
                             <h2 className={styles.missionHeading}>INFRASTRUCTURE, NOT SERVICES.</h2>
                             <p className={styles.text}>
-                                Kilvington Digital Marketing isn't a "Service Provider". We are infrastructure architects.
-                                When you work with us, we aren't just posting on Facebook for you. We are building a
+                                Kilvington Digital Marketing isn&apos;t a &quot;Service Provider&quot;. We are infrastructure architects.
+                                When you work with us, we aren&apos;t just posting on Facebook for you. We are building a
                                 <strong> permanent digital asset</strong> that dominates your specific territory.
                             </p>
                             <p className={styles.text}>
                                 We saw excellent tradesmen—roofers, builders, arborists—being taken advantage of by
-                                fast-talking marketing "gurus" who had never held a hammer in their lives.
+                                fast-talking marketing &quot;gurus&quot; who had never held a hammer in their lives.
                                 We decided to bring the same level of precision and integrity to digital marketing
                                 that you bring to your job site.
                             </p>
@@ -60,10 +60,10 @@ export default function AboutPage() {
                         </div>
                         <div className={styles.imageWrapper}>
                             <Image
-                                src="/images/about-us-hero.png"
-                                alt="Kilvington Digital Strategy Control Room"
+                                src="/images/kilvington-digital-agency-strategy-control-room.png"
+                                alt="Kilvington Digital Agency Strategy Control Room"
                                 fill
-                                style={{ objectFit: 'cover' }}
+                                className={styles.objectCover}
                             />
                         </div>
                     </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
             {/* Core Values */}
             <section className={styles.valuesSection}>
                 <div className="container">
-                    <h2 className={styles.missionHeading} style={{ textAlign: 'center' }}>THE CODE WE LIVE BY</h2>
+                    <h2 className={`${styles.missionHeading} ${styles.centeredHeading}`}>THE CODE WE LIVE BY</h2>
                     <div className={styles.valuesGrid}>
                         <div className={styles.valueCard}>
                             <h3 className={styles.valueTitle}>TERRITORY INTEGRITY</h3>
@@ -101,10 +101,10 @@ export default function AboutPage() {
             </section>
 
             {/* CTA */}
-            <section style={{ padding: '100px 0', borderTop: '1px solid #222' }}>
-                <div className="container" style={{ textAlign: 'center' }}>
+            <section className={styles.ctaSection}>
+                <div className={`container ${styles.ctaContainer}`}>
                     <h2 className={styles.missionHeading}>READY TO OWN YOUR MARKET?</h2>
-                    <p style={{ color: '#aaa', maxWidth: '600px', margin: '0 auto 30px' }}>
+                    <p className={styles.ctaText}>
                         We are currently vetting partners for the remaining Q1 2026 territories.
                     </p>
                     <Link href="/contact" className="btn btn-primary">CHECK YOUR COUNTY STATUS</Link>

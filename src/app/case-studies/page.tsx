@@ -24,12 +24,12 @@ export default function CaseStudiesListing() {
                 <div className={styles.grid}>
                     {/* Case Study Card 1: Apex Tree */}
                     <div className={styles.card}>
-                        <div className={styles.cardImage} style={{ position: 'relative', background: '#000' }}>
+                        <div className={`${styles.cardImage} ${styles.cardImageRelative}`}>
                             <Image
-                                src="/images/case-studies/apex-tree-logo.png"
-                                alt="Apex Tree Company Logo"
+                                src="/images/case-studies/apex-tree-company-logo-marketing-results.png"
+                                alt="Apex Tree Company Logo Marketing Results"
                                 fill
-                                style={{ objectFit: 'contain', padding: '40px' }}
+                                className={styles.objectContain}
                             />
                         </div>
                         <div className={styles.cardContent}>
@@ -38,7 +38,7 @@ export default function CaseStudiesListing() {
 
                             <div className={styles.cardStats}>
                                 <div className={styles.stat}>
-                                    <span className={styles.statValue} style={{ color: 'var(--c-green-acid)' }}>1,600%</span>
+                                    <span className={`${styles.statValue} ${styles.statHighlight}`}>1,600%</span>
                                     <span className={styles.statLabel}>ROI</span>
                                 </div>
                                 <div className={styles.stat}>
@@ -54,22 +54,22 @@ export default function CaseStudiesListing() {
                     </div>
 
                     {/* Placeholder for future cards to show the grid structure */}
-                    <div className={styles.card} style={{ opacity: 0.3, borderColor: '#222' }}>
-                        <div className={styles.cardImage} style={{ background: '#111' }}></div>
+                    <div className={`${styles.card} ${styles.cardPlaceholder}`}>
+                        <div className={`${styles.cardImage} ${styles.cardImagePlaceholder}`}></div>
                         <div className={styles.cardContent}>
                             <div className={styles.industryTag}>Coming Soon</div>
-                            <h2 className={styles.cardTitle} style={{ color: '#555' }}>Moore County Project</h2>
-                            <div className={styles.cardStats} style={{ borderColor: '#222' }}>
+                            <h2 className={`${styles.cardTitle} ${styles.cardTitlePlaceholder}`}>Moore County Project</h2>
+                            <div className={`${styles.cardStats} ${styles.cardStatsPlaceholder}`}>
                                 <div className={styles.stat}>
-                                    <span className={styles.statValue} style={{ color: '#555' }}>---</span>
+                                    <span className={`${styles.statValue} ${styles.statPlaceholder}`}>---</span>
                                     <span className={styles.statLabel}>ROI</span>
                                 </div>
                                 <div className={styles.stat}>
-                                    <span className={styles.statValue} style={{ color: '#555' }}>---</span>
+                                    <span className={`${styles.statValue} ${styles.statPlaceholder}`}>---</span>
                                     <span className={styles.statLabel}>Status</span>
                                 </div>
                             </div>
-                            <span className={styles.link} style={{ color: '#555' }}>Locked</span>
+                            <span className={`${styles.link} ${styles.linkPlaceholder}`}>Locked</span>
                         </div>
                     </div>
                 </div>

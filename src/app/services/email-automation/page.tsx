@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Automated nurture campaigns that turn leads into customers and customers into referral sources.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function EmailAutomationPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="Email Automation"
+                description="Automated nurture campaigns that turn leads into customers and customers into referral sources."
+                url="https://kilvington.digital/services/email-automation"
+                serviceType="Marketing Automation Service"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -32,36 +40,31 @@ export default function EmailAutomationPage() {
                             <h2 className={styles.introHeading}>NEVER LOSE A LEAD.</h2>
                             <p className={styles.introText}>
                                 A lead fills out a form. What happens next?
-                                If the answer isn't "They instantly get a text and an email sequence," you are losing 50% of your revenue.
+                                Please note: The above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.
+                                If the answer isn&apos;t &quot;They instantly get a text and an email sequence,&quot; you are losing 50% of your revenue.
                             </p>
-                            <ul style={{ listStyle: 'none', padding: 0, marginTop: '30px' }}>
-                                <li style={{ marginBottom: '15px', color: '#ccc', display: 'flex', alignItems: 'center' }}>
-                                    <span style={{ color: 'var(--c-green-acid)', marginRight: '10px' }}>✓</span>
+                            <ul className={styles.checklist}>
+                                <li className={styles.checklistItem}>
+                                    <span className={styles.checkIcon}>✓</span>
                                     Instant Lead Response (SMS/Email)
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ccc', display: 'flex', alignItems: 'center' }}>
-                                    <span style={{ color: 'var(--c-green-acid)', marginRight: '10px' }}>✓</span>
+                                <li className={styles.checklistItem}>
+                                    <span className={styles.checkIcon}>✓</span>
                                     Long-Term Nurture Campaigns
                                 </li>
-                                <li style={{ marginBottom: '15px', color: '#ccc', display: 'flex', alignItems: 'center' }}>
-                                    <span style={{ color: 'var(--c-green-acid)', marginRight: '10px' }}>✓</span>
+                                <li className={styles.checklistItem}>
+                                    <span className={styles.checkIcon}>✓</span>
                                     Review Request Sequences
                                 </li>
                             </ul>
                         </div>
                         <div>
                             <Image
-                                src="/images/email-automation-hero.png"
-                                alt="Email Automations Visualization"
+                                src="/images/automated-customer-retention-system-email-marketing.png"
+                                alt="Automated Customer Retention System Email Marketing"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>

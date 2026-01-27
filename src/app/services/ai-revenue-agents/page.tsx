@@ -9,16 +9,24 @@ export const metadata: Metadata = {
     description: "Automate your sales pipeline with AI Revenue Agents. 24/7 lead qualification and instant response.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function AIOPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="AI Revenue Agents (AIO)"
+                description="Automate your sales pipeline with AI Revenue Agents. 24/7 lead qualification and instant response."
+                url="https://kilvington.digital/services/ai-revenue-agents"
+                serviceType="AI Automation"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
                     <span className={styles.label}>CORE ENGINE: MODULE 03</span>
                     <h1 className={styles.title}>AI REVENUE AGENTS (AIO)</h1>
                     <p className={styles.subtitle}>
-                        Traffic is useless if you don't convert it.
+                        Traffic is useless if you don&apos;t convert it.
                         We deploy intelligent agents to handle every lead, instantly, 24/7.
                     </p>
                     <Link href="/contact" className="btn btn-primary">DEPLOY AGENTS</Link>
@@ -30,10 +38,10 @@ export default function AIOPage() {
                 <div className="container">
                     <div className={styles.introGrid}>
                         <div>
-                            <h2 className={styles.introHeading}>THE "SPEED TO LEAD" REVOLUTION</h2>
+                            <h2 className={styles.introHeading}>THE &quot;SPEED TO LEAD&quot; REVOLUTION</h2>
                             <p className={styles.introText}>
-                                If you don't answer a lead in 5 minutes, your chances of closing drop by 80%.
-                                You are busy running a business; you can't stare at your phone all day.
+                                If you don&apos;t answer a lead in 5 minutes, your chances of closing drop by 80%.
+                                You are busy running a business; you can&apos;t stare at your phone all day.
                             </p>
                             <p className={styles.introText}>
                                 Our AI Revenue Agents bridge the gap. They engage visitors, qualify them,
@@ -42,16 +50,11 @@ export default function AIOPage() {
                         </div>
                         <div>
                             <Image
-                                src="/images/aio-revenue-agents.png"
-                                alt="AI Revenue Agent Chat Interface"
+                                src="/images/ai-revenue-agent-booking-automation-interface.png"
+                                alt="AI Revenue Agent Booking Automation Interface"
                                 width={500}
                                 height={300}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #2E8B57',
-                                    borderRadius: '4px'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>
@@ -68,7 +71,7 @@ export default function AIOPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>INTELLIGENT QUALIFICATION</h3>
                             <p className={styles.featureDesc}>
-                                Agents ask the questions that matter: "What is your budget?", "When do you need this done?".
+                                Agents ask the questions that matter: &quot;What is your budget?&quot;, &quot;When do you need this done?&quot;.
                                 Stop wasting time on tire-kickers.
                             </p>
                         </div>
@@ -85,9 +88,9 @@ export default function AIOPage() {
             {/* Why It Matters */}
             <section className={styles.benefitSection}>
                 <div className="container">
-                    <h2 className={styles.introHeading} style={{ textAlign: 'center' }}>WHY AIO MATTERS</h2>
+                    <h2 className={`${styles.introHeading} ${styles.centeredHeading}`}>WHY AIO MATTERS</h2>
                     <ul className={styles.benefitList}>
-                        <li className={styles.benefitItem}>Eliminate "Speed to Lead" anxiety</li>
+                        <li className={styles.benefitItem}>Eliminate &quot;Speed to Lead&quot; anxiety</li>
                         <li className={styles.benefitItem}>Reduce overhead (no need for a full-time receptionist)</li>
                         <li className={styles.benefitItem}>Increase conversion rates on existing traffic</li>
                         <li className={styles.benefitItem}>Operate 24/7/365 without breaks</li>

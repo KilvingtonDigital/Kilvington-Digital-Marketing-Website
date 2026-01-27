@@ -3,6 +3,7 @@ import { Poppins, Oswald, Montserrat } from "next/font/google";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "./globals.css";
+import JsonLd from "../components/JsonLd";
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${oswald.variable} ${montserrat.variable}`}>
+        <JsonLd />
         <Navigation />
         {children}
         <Footer />

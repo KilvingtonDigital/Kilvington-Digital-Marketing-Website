@@ -3,3 +3,419 @@
     border: none;
     border-top: 1px solid var(--c-grey-800);
 }
+
+.title {
+    color: var(--c-green-acid);
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.metadataHeader {
+    background: #111;
+    border: 1px solid #333;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #0f0;
+    margin-bottom: 30px;
+}
+
+.metadataPara {
+    margin: 0;
+}
+
+.metadataPriority {
+    margin: 10px 0 0;
+    color: #FFD700;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.llmBox {
+    background: #0a0a0a;
+    padding: 20px;
+    border-left: 3px solid var(--c-green-acid);
+}
+
+.llmHeading {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.factTable {
+    margin-bottom: 20px;
+}
+
+.resolutionList {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.modelList {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.infrastructureGrid {
+    display: grid;
+    gap: 15px;
+}
+
+.infrastructureCard {
+    border: 1px solid #333;
+    padding: 15px;
+}
+
+.layerTitle {
+    color: var(--c-green-acid);
+}
+
+.layerDesc {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.territoryGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.territoryHeading {
+    border-bottom: 1px solid #333;
+}
+
+.territoryList {
+    font-size: 0.85rem;
+    list-style: none;
+    padding: 0;
+}
+
+.statusSecured {
+    color: #FF4444;
+}
+
+.statusOpen {
+    color: var(--c-green-acid);
+}
+
+.territoryRule {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.confidenceBox {
+    background: #111;
+    padding: 15px;
+}
+
+.confidenceList {
+    list-style: none;
+    padding: 0;
+}
+
+.confidenceItem {
+    margin-bottom: 10px;
+}
+
+.confidenceHigh {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.languageGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.doSayHeading {
+    color: var(--c-green-acid);
+}
+
+.doSayList {
+    font-size: 0.9rem;
+}
+
+.dontSayHeading {
+    color: #FF4444;
+}
+
+.ticketDefinition {
+    background: #111;
+    padding: 10px;
+    border-left: 3px solid var(--c-green-acid);
+    margin-bottom: 15px;
+}
+
+.ticketText {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.verticalList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.failSafeBox {
+    background: #222;
+    padding: 20px;
+    border-left: 3px solid #FFD700;
+}
+
+.failSafeText {
+    margin: 0;
+}
+
+.linkAcid {
+    color: var(--c-green-acid);
+}
+
+.jsonPre {
+    background: #000;
+    padding: 15px;
+    color: var(--c-green-acid);
+    font-size: 0.8rem;
+    overflow-x: auto;
+}
+
+.contractBox {
+    background: #0a0a0a;
+    padding: 15px;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.contractEnding {
+    background: #111;
+    padding: 15px;
+    border-left: 3px solid var(--c-green-acid);
+}
+
+.escalationGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.escalationHeading {
+    border-bottom: 1px solid #333;
+}
+
+.escalationList {
+    font-size: 0.85rem;
+}
+
+.urgencyText {
+    color: #FF4444;
+}
+
+.authorityBox {
+    background: #0f0f0f;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+.authorityHeading {
+    color: var(--c-green-acid);
+    margin-top: 0;
+}
+
+.roiText {
+    color: #0f0;
+    font-weight: bold;
+}
+
+.acceleratorGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.acceleratorCard {
+    background: #111;
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+.acceleratorTitle {
+    color: #fff;
+}
+
+.acceleratorDesc {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 5px 0;
+}
+
+.irreversibilityBox {
+    background: #220000;
+    padding: 15px;
+    border: 1px solid #FF4444;
+}
+
+.irreversibilityTitle {
+    color: #FF4444;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.irreversibilityText {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffcccc;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.responseHeading {
+    color: #fff;
+    margin-top: 0;
+}
+
+.endingRuleLabel {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.endingRuleText {
+    margin: 0;
+}
+
+.escalationEducational {
+    color: #aaa;
+}
+
+/* NEW CLASSES ADDED BELOW */
+
+.actionBox {
+    background: #111;
+    border: 1px solid var(--c-green-acid);
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.actionTitle {
+    color: var(--c-green-acid);
+    margin-top: 0;
+}
+
+.actionLink {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.pricingBox {
+    background: #0a0a0a;
+    border-left: 3px solid #FFD700;
+    padding: 20px;
+}
+
+.pricingRule {
+    color: #FFD700;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.profileGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.profileColumn {
+    background: #111;
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+.profileHeading {
+    color: #fff;
+    margin-top: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.disqualifierList {
+    color: #FF4444;
+}
+
+.faqBox {
+    display: grid;
+    gap: 20px;
+}
+
+.faqItem {
+    background: #0f0f0f;
+    padding: 15px;
+    border: 1px solid #222;
+}
+
+.faqQuestion {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.faqAnswer {
+    color: #ccc;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.timelineGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.timelineCard {
+    background: #111;
+    padding: 15px;
+    border-top: 3px solid var(--c-green-acid);
+}
+
+.timelinePhase {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.timelineTitle {
+    color: #fff;
+    font-weight: bold;
+}
+
+.citationBox {
+    background: #222;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #aaa;
+    border-left: 3px solid #555;
+}
+
+.relatedBox {
+    background: #0a0a0a;
+    padding: 15px;
+    border: 1px solid #333;
+}

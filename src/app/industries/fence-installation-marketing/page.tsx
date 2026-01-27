@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Exclusive digital marketing for Fence companies. Dominate your county with SEO, GEO, and AI Revenue Agents.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function FenceInstallationPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="Fence Installation Marketing"
+                description="Exclusive digital marketing for Fence companies. Dominate your county with SEO, GEO, and AI Revenue Agents."
+                url="https://kilvington.digital/industries/fence-installation-marketing"
+                serviceType="Digital Marketing for Fence Contractors"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -32,15 +40,15 @@ export default function FenceInstallationPage() {
                         <div>
                             <h2 className={styles.introHeading}>STOP BUYING SHARED LEADS.</h2>
                             <p className={styles.introText}>
-                                HomeAdvisor sends the same "need a fence" lead to 8 other guys.
+                                HomeAdvisor sends the same &quot;need a fence&quot; lead to 8 other guys.
                                 We build a digital fortress around your brand so 100% of the traffic belongs to you.
                             </p>
                             <p className={styles.introText}>
                                 Whether you are targeting HOA privacy fences in <strong>Cumberland County</strong> or high-end security gates in <strong>Lee County</strong>, we position you as the only logical choice.
                             </p>
-                            <div style={{ marginTop: '30px', padding: '20px', borderLeft: '3px solid var(--c-green-acid)', background: 'rgba(255,255,255,0.05)' }}>
-                                <strong style={{ color: 'var(--c-white)', display: 'block', marginBottom: '10px' }}>THE EXCLUSIVE PARTNER PROMISE</strong>
-                                <p style={{ color: '#ccc', margin: 0 }}>
+                            <div className={styles.promiseBox}>
+                                <strong className={styles.promiseTitle}>THE EXCLUSIVE PARTNER PROMISE</strong>
+                                <p className={styles.promiseText}>
                                     We represent ONE fence company per county. If we act for you in Lee County, your competitors are locked out.
                                 </p>
                             </div>
@@ -51,13 +59,7 @@ export default function FenceInstallationPage() {
                                 alt="Fence Marketing Data Visualization"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={`${styles.introImage} ${styles.treeImage}`}
                             />
                         </div>
                     </div>
@@ -67,13 +69,13 @@ export default function FenceInstallationPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>HOA TARGETING</h3>
                             <p className={styles.featureDesc}>
-                                We geo-fence new subdivisions where homeowners desperately need privacy fences. We hit them before they even Google "fence company".
+                                We geo-fence new subdivisions where homeowners desperately need privacy fences. We hit them before they even Google &quot;fence company&quot;.
                             </p>
                         </div>
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>MATERIAL SPECIFIC SEO</h3>
                             <p className={styles.featureDesc}>
-                                We don't just rank for "fence". We rank for "Tan Vinyl Privacy Fence", "Black Aluminum Puppy Picket", and "Commercial Chain Link".
+                                We don&apos;t just rank for &quot;fence&quot;. We rank for &quot;Tan Vinyl Privacy Fence&quot;, &quot;Black Aluminum Puppy Picket&quot;, and &quot;Commercial Chain Link&quot;.
                             </p>
                         </div>
                         <div className={styles.featureCard}>

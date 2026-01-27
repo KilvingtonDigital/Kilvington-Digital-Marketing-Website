@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Exclusive digital marketing for Epoxy & Concrete Coating companies. Showcase your work and capture high-end garage leads.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function EpoxyFlooringPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="Epoxy Flooring Marketing"
+                description="Exclusive digital marketing for Epoxy & Concrete Coating companies. Showcase your work and capture high-end garage leads."
+                url="https://kilvington.digital/industries/epoxy-flooring-marketing"
+                serviceType="Digital Marketing for Flooring Contractors"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -32,31 +40,25 @@ export default function EpoxyFlooringPage() {
                         <div>
                             <h2 className={styles.introHeading}>SHOW IT, SELL IT.</h2>
                             <p className={styles.introText}>
-                                Epoxy is a visual product. We build portfolio-heavy sites that make homeowners jealous of their neighbor's garage.
+                                Epoxy is a visual product. We build portfolio-heavy sites that make homeowners jealous of their neighbor&apos;s garage.
                             </p>
                             <p className={styles.introText}>
                                 Capture the high-end residential market in <strong>Wake County</strong> or large warehouse contracts in <strong>Lee County</strong>.
                             </p>
-                            <div style={{ marginTop: '30px', padding: '20px', borderLeft: '3px solid var(--c-green-acid)', background: 'rgba(255,255,255,0.05)' }}>
-                                <strong style={{ color: 'var(--c-white)', display: 'block', marginBottom: '10px' }}>THE EXCLUSIVE PARTNER PROMISE</strong>
-                                <p style={{ color: '#ccc', margin: 0 }}>
+                            <div className={styles.promiseBox}>
+                                <strong className={styles.promiseTitle}>THE EXCLUSIVE PARTNER PROMISE</strong>
+                                <p className={styles.promiseText}>
                                     We represent ONE coating company per territory.
                                 </p>
                             </div>
                         </div>
                         <div>
                             <Image
-                                src="/images/epoxy-flooring-marketing-hero.png"
-                                alt="Epoxy Flooring Marketing Data Visualization"
+                                src="/images/epoxy-flooring-contractor-marketing-system.png"
+                                alt="Epoxy Flooring Contractor Marketing System"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>

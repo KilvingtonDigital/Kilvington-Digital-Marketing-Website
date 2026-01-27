@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Technical SEO services engineered for domination. We build the infrastructure that ranks #1.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function SEOInfrastructurePage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="SEO Infrastructure"
+                description="Technical SEO services engineered for domination. We build the infrastructure that ranks #1."
+                url="https://kilvington.digital/services/seo-infrastructure"
+                serviceType="Technical SEO Service"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -32,26 +40,21 @@ export default function SEOInfrastructurePage() {
                         <div>
                             <h2 className={styles.introHeading}>BUILT FOR SPEED. <br />OPTIMIZED FOR DOMINANCE.</h2>
                             <p className={styles.introText}>
-                                Most agencies sell "SEO" as a monthly mystery box. We sell infrastructure.
+                                Most agencies sell &quot;SEO&quot; as a monthly mystery box. We sell infrastructure.
                                 Before content is king, the kingdom must be built.
                             </p>
                             <p className={styles.introText}>
                                 Our approach focuses on technical perfection: schema markup, site architecture,
-                                and lightning-fast load times that signal authority to Google's algorithms.
+                                and lightning-fast load times that signal authority to Google&apos;s algorithms.
                             </p>
                         </div>
                         <div>
                             <Image
-                                src="/images/seo-infrastructure.png"
-                                alt="SEO Infrastructure Visualization"
+                                src="/images/seo-infrastructure-technical-search-optimization.png"
+                                alt="SEO Infrastructure Technical Search Optimization"
                                 width={500}
                                 height={300}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px'
-                                }}
+                                className={`${styles.introImage} ${styles.seoImage}`}
                             />
                         </div>
                     </div>
@@ -75,7 +78,7 @@ export default function SEOInfrastructurePage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>SPEED OPTIMIZATION</h3>
                             <p className={styles.featureDesc}>
-                                Sub-second load times. We optimize specifically for Google's Core Web Vitals to ensure you pass every test.
+                                Sub-second load times. We optimize specifically for Google&apos;s Core Web Vitals to ensure you pass every test.
                             </p>
                         </div>
                     </div>
@@ -85,7 +88,7 @@ export default function SEOInfrastructurePage() {
             {/* Why It Matters */}
             <section className={styles.benefitSection}>
                 <div className="container">
-                    <h2 className={styles.introHeading} style={{ textAlign: 'center' }}>WHY INFRASTRUCTURE MATTERS</h2>
+                    <h2 className={`${styles.introHeading} ${styles.centeredHeading}`}>WHY INFRASTRUCTURE MATTERS</h2>
                     <ul className={styles.benefitList}>
                         <li className={styles.benefitItem}>Increases crawling budget from search engines</li>
                         <li className={styles.benefitItem}>Reduces bounce rates with instant loading</li>

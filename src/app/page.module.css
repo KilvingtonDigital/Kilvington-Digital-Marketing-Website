@@ -298,5 +298,26 @@
   .headingLg {
     font-size: 2rem;
     hyphens: auto;
+    font-size: 2rem;
+    hyphens: auto;
   }
+}
+
+.heroLogoWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.ownerInfo {
+  color: var(--c-white);
+}
+
+.exclusiveFocus {
+  color: var(--c-green-acid);
+  background-color: black;
+  padding: 0 4px;
+}
+
+.servicesText {
+  opacity: 0.7;
 }

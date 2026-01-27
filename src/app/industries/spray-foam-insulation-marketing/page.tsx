@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Exclusive digital marketing for Spray Foam & Insulation companies. Educate homeowners and capture high-ticket energy efficiency jobs.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function SprayFoamPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="Spray Foam Insulation Marketing"
+                description="Exclusive digital marketing for Spray Foam & Insulation companies. Educate homeowners and capture high-ticket energy efficiency jobs."
+                url="https://kilvington.digital/industries/spray-foam-insulation-marketing"
+                serviceType="Digital Marketing for Insulation Contractors"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -19,7 +27,7 @@ export default function SprayFoamPage() {
                     <h1 className={styles.title}>SPRAY FOAM DOMINANCE</h1>
                     <p className={styles.subtitle}>
                         High ticket. High technicality. High reward.
-                        We educate the customer so you don't have to explain "R-Value" 50 times a day.
+                        We educate the customer so you don&apos;t have to explain &quot;R-Value&quot; 50 times a day.
                     </p>
                     <Link href="/contact" className="btn btn-primary">CHECK COUNTY AVAILABILITY</Link>
                 </div>
@@ -35,26 +43,20 @@ export default function SprayFoamPage() {
                                 Spray foam is an investment. Homeowners need to understand the ROI.
                                 Our content explains the math, overcoming sticker shock before you ever arrive.
                             </p>
-                            <div style={{ marginTop: '30px', padding: '20px', borderLeft: '3px solid var(--c-green-acid)', background: 'rgba(255,255,255,0.05)' }}>
-                                <strong style={{ color: 'var(--c-white)', display: 'block', marginBottom: '10px' }}>THE EXCLUSIVE PARTNER PROMISE</strong>
-                                <p style={{ color: '#ccc', margin: 0 }}>
+                            <div className={styles.promiseBox}>
+                                <strong className={styles.promiseTitle}>THE EXCLUSIVE PARTNER PROMISE</strong>
+                                <p className={styles.promiseText}>
                                     We represent ONE insulation company per territory.
                                 </p>
                             </div>
                         </div>
                         <div>
                             <Image
-                                src="/images/spray-foam-marketing-hero.png"
-                                alt="Spray Foam Marketing Data Visualization"
+                                src="/images/spray-foam-insulation-marketing-leads.png"
+                                alt="Spray Foam Insulation Marketing Leads"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>
@@ -64,13 +66,13 @@ export default function SprayFoamPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>EDUCATIONAL CONTENT STRATEGY</h3>
                             <p className={styles.featureDesc}>
-                                Technical articles on "Open Cell vs Closed Cell" that rank nationally and build local trust.
+                                Technical articles on &quot;Open Cell vs Closed Cell&quot; that rank nationally and build local trust.
                             </p>
                         </div>
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>CRAWL SPACE ENCAPSULATION</h3>
                             <p className={styles.featureDesc}>
-                                A massive add-on service. We target "moisture control" keywords to drive high-ticket encapsulation jobs.
+                                A massive add-on service. We target &quot;moisture control&quot; keywords to drive high-ticket encapsulation jobs.
                             </p>
                         </div>
                         <div className={styles.featureCard}>

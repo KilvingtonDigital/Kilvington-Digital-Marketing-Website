@@ -9,16 +9,24 @@ export const metadata: Metadata = {
     description: "Exclusive digital marketing for Custom Home Builders. High-ticket lead generation for luxury builds.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function HomeBuilderPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="Custom Home Builder Marketing"
+                description="Exclusive digital marketing for Custom Home Builders. High-ticket lead generation for luxury builds."
+                url="https://kilvington.digital/industries/custom-home-builder-marketing"
+                serviceType="Digital Marketing for Home Builders"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
                     <span className={styles.label}>INDUSTRY FOCUS: LUXURY CONSTRUCTION</span>
                     <h1 className={styles.title}>CUSTOM BUILDER MARKETING</h1>
                     <p className={styles.subtitle}>
-                        One client is worth $1M+. Stop treating your marketing like it's a $50 service.
+                        One client is worth $1M+. Stop treating your marketing like it&apos;s a $50 service.
                         We build the digital prestige that attracts qualified, high-net-worth buyers.
                     </p>
                     <Link href="/contact" className="btn btn-primary">CHECK COUNTY AVAILABILITY</Link>
@@ -32,32 +40,26 @@ export default function HomeBuilderPage() {
                         <div>
                             <h2 className={styles.introHeading}>PRESTIGE IS PROFIT.</h2>
                             <p className={styles.introText}>
-                                A custom home buyer doesn't click the first Google Ad. They research. They stalk. They verify.
-                                We build a digital presence that screams "Authority" from the moment they land on your site.
+                                A custom home buyer doesn&apos;t click the first Google Ad. They research. They stalk. They verify.
+                                We build a digital presence that screams &quot;Authority&quot; from the moment they land on your site.
                             </p>
                             <p className={styles.introText}>
                                 Whether you are building equestrian estates in <strong>Moore County</strong> or modern luxury in <strong>Wake County</strong>, we ensure your brand aligns with the quality of your work.
                             </p>
-                            <div style={{ marginTop: '30px', padding: '20px', borderLeft: '3px solid var(--c-green-acid)', background: 'rgba(255,255,255,0.05)' }}>
-                                <strong style={{ color: 'var(--c-white)', display: 'block', marginBottom: '10px' }}>THE EXCLUSIVE PARTNER PROMISE</strong>
-                                <p style={{ color: '#ccc', margin: 0 }}>
+                            <div className={styles.promiseBox}>
+                                <strong className={styles.promiseTitle}>THE EXCLUSIVE PARTNER PROMISE</strong>
+                                <p className={styles.promiseText}>
                                     We represent ONE custom builder per county. If we handle your Moore County territory, we do not work with anyone else there.
                                 </p>
                             </div>
                         </div>
                         <div>
                             <Image
-                                src="/images/home-builder-marketing-hero.png"
-                                alt="Custom Home Builder Marketing Data Visualization"
+                                src="/images/custom-home-builder-marketing-luxury-construction-leads.png"
+                                alt="Custom Home Builder Marketing Luxury Construction Leads"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>
@@ -73,7 +75,7 @@ export default function HomeBuilderPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>TRUST ARCHITECTURE</h3>
                             <p className={styles.featureDesc}>
-                                We implement "Social Proof" systems that showcase your awards, certifications, and high-end testimonials to build instant trust.
+                                We implement &quot;Social Proof&quot; systems that showcase your awards, certifications, and high-end testimonials to build instant trust.
                             </p>
                         </div>
                         <div className={styles.featureCard}>

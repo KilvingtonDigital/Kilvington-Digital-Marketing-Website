@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Exclusive digital marketing for HVAC companies. Dominate local search for repairs and system replacements.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function HVACMarketingPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="HVAC Marketing"
+                description="Exclusive digital marketing for HVAC companies. Dominate local search for repairs and system replacements."
+                url="https://kilvington.digital/industries/hvac-marketing"
+                serviceType="Digital Marketing for HVAC Contractors"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -19,7 +27,7 @@ export default function HVACMarketingPage() {
                     <h1 className={styles.title}>HVAC DOMINANCE</h1>
                     <p className={styles.subtitle}>
                         When the AC dies, speed wins.
-                        Our "Speed to Lead" AIO agents book appointments while your competitors are still checking voicemail.
+                        Our &quot;Speed to Lead&quot; AIO agents book appointments while your competitors are still checking voicemail.
                     </p>
                     <Link href="/contact" className="btn btn-primary">CHECK COUNTY AVAILABILITY</Link>
                 </div>
@@ -38,26 +46,20 @@ export default function HVACMarketingPage() {
                             <p className={styles.introText}>
                                 From high-margin system replacements in <strong>Moore County</strong> to emergency repairs in <strong>Lee County</strong>, we ensure you are the first responder.
                             </p>
-                            <div style={{ marginTop: '30px', padding: '20px', borderLeft: '3px solid var(--c-green-acid)', background: 'rgba(255,255,255,0.05)' }}>
-                                <strong style={{ color: 'var(--c-white)', display: 'block', marginBottom: '10px' }}>THE EXCLUSIVE PARTNER PROMISE</strong>
-                                <p style={{ color: '#ccc', margin: 0 }}>
+                            <div className={styles.promiseBox}>
+                                <strong className={styles.promiseTitle}>THE EXCLUSIVE PARTNER PROMISE</strong>
+                                <p className={styles.promiseText}>
                                     We represent ONE HVAC company per territory.
                                 </p>
                             </div>
                         </div>
                         <div>
                             <Image
-                                src="/images/hvac-marketing-hero.png"
-                                alt="HVAC Marketing Data Visualization"
+                                src="/images/hvac-contractor-marketing-ac-repair-leads.png"
+                                alt="HVAC Contractor Marketing AC Repair Leads"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>
@@ -67,7 +69,7 @@ export default function HVACMarketingPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>SEASONAL SHIFTS</h3>
                             <p className={styles.featureDesc}>
-                                We automatically switch your SEO focus from "AC Repair" to "Furnace Tune-up" based on weather triggers.
+                                We automatically switch your SEO focus from &quot;AC Repair&quot; to &quot;Furnace Tune-up&quot; based on weather triggers.
                             </p>
                         </div>
                         <div className={styles.featureCard}>

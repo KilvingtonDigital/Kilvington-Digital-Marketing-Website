@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Optimize your business for the future of search. We structure data for ChatGPT, Claude, and AI Agents.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function GEOPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="GEO - Generative Engine Optimization"
+                description="Optimize your business for the future of search. We structure data for ChatGPT, Claude, and AI Agents."
+                url="https://kilvington.digital/services/geo-generative-optimization"
+                serviceType="Search Engine Optimization Service"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -30,10 +38,10 @@ export default function GEOPage() {
                 <div className="container">
                     <div className={styles.introGrid}>
                         <div>
-                            <h2 className={styles.introHeading}>THE NEW SEO IS "AI RECOMMENDATION"</h2>
+                            <h2 className={styles.introHeading}>THE NEW SEO IS &quot;AI RECOMMENDATION&quot;</h2>
                             <p className={styles.introText}>
-                                When a user asks ChatGPT, "Who is the best tree service in Sanford?",
-                                the AI doesn't just look at keywords. It looks for authority, sentiment,
+                                When a user asks ChatGPT, &quot;Who is the best tree service in Sanford?&quot;,
+                                the AI doesn&apos;t just look at keywords. It looks for authority, sentiment,
                                 and structured facts.
                             </p>
                             <p className={styles.introText}>
@@ -42,16 +50,11 @@ export default function GEOPage() {
                         </div>
                         <div>
                             <Image
-                                src="/images/geo-ai-model.png"
-                                alt="Generative AI Model Node Graph"
+                                src="/images/geo-generative-ai-search-optimization-model.png"
+                                alt="Geo Generative AI Search Optimization Model"
                                 width={500}
                                 height={300}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #004080',
-                                    borderRadius: '4px'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>
@@ -61,7 +64,7 @@ export default function GEOPage() {
                         <div className={styles.featureCard}>
                             <h3 className={styles.featureTitle}>ENTITY AUTHORITY</h3>
                             <p className={styles.featureDesc}>
-                                Establishing your brand as a known "Entity" in the knowledge graph.
+                                Establishing your brand as a known &quot;Entity&quot; in the knowledge graph.
                                 Ensuring AI knows exactly who you are and what you do.
                             </p>
                         </div>
@@ -85,10 +88,10 @@ export default function GEOPage() {
             {/* Why It Matters */}
             <section className={styles.benefitSection}>
                 <div className="container">
-                    <h2 className={styles.introHeading} style={{ textAlign: 'center' }}>WHY GEO MATTERS</h2>
+                    <h2 className={`${styles.introHeading} ${styles.centeredHeading}`}>WHY GEO MATTERS</h2>
                     <ul className={styles.benefitList}>
                         <li className={styles.benefitItem}>Capture traffic from ChatGPT, Perplexity, and Gemini</li>
-                        <li className={styles.benefitItem}>Prepare for Google's "Search Generative Experience" (SGE)</li>
+                        <li className={styles.benefitItem}>Prepare for Google&apos;s &quot;Search Generative Experience&quot; (SGE)</li>
                         <li className={styles.benefitItem}>Build trust that supersedes traditional keyword stuffing</li>
                         <li className={styles.benefitItem}>Dominate voice search (Siri, Alexa, Google Assistant)</li>
                     </ul>
@@ -98,7 +101,7 @@ export default function GEOPage() {
             {/* CTA */}
             <section className={styles.ctaSection}>
                 <div className="container">
-                    <h2 className={styles.introHeading}>DON'T GET LEFT BEHIND</h2>
+                    <h2 className={styles.introHeading}>DON&apos;T GET LEFT BEHIND</h2>
                     <p className={styles.subtitle}>
                         We only accept one partner per industry, per territory.
                     </p>

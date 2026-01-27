@@ -33,6 +33,10 @@
     margin-bottom: 20px;
 }
 
+.dot {
+    color: var(--c-green-acid);
+}
+
 .brandDesc {
     line-height: 1.6;
     max-width: 300px;

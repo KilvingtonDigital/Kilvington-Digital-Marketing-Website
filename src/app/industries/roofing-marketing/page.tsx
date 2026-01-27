@@ -9,9 +9,17 @@ export const metadata: Metadata = {
     description: "Exclusive digital marketing for Roofing & Storm Restoration companies. Dominate local search for repairs and replacements.",
 };
 
+import ServiceSchema from '../../../components/ServiceSchema';
+
 export default function RoofingMarketingPage() {
     return (
         <div className="page-wrapper">
+            <ServiceSchema
+                name="Roofing Marketing"
+                description="Exclusive digital marketing for Roofing & Storm Restoration companies. Dominate local search for repairs and replacements."
+                url="https://kilvington.digital/industries/roofing-marketing"
+                serviceType="Digital Marketing for Roofers"
+            />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -19,7 +27,7 @@ export default function RoofingMarketingPage() {
                     <h1 className={styles.title}>ROOFING DOMINANCE</h1>
                     <p className={styles.subtitle}>
                         When the storm hits, you need to be the first call.
-                        We build "Storm Mode" infrastructure that captures high-intent leads instantly.
+                        We build &quot;Storm Mode&quot; infrastructure that captures high-intent leads instantly.
                     </p>
                     <Link href="/contact" className="btn btn-primary">CHECK COUNTY AVAILABILITY</Link>
                 </div>
@@ -38,26 +46,20 @@ export default function RoofingMarketingPage() {
                             <p className={styles.introText}>
                                 Whether you want insurance claims in <strong>Wake County</strong> or retail replacements in <strong>Chatham County</strong>, we ensure you own the search results.
                             </p>
-                            <div style={{ marginTop: '30px', padding: '20px', borderLeft: '3px solid var(--c-green-acid)', background: 'rgba(255,255,255,0.05)' }}>
-                                <strong style={{ color: 'var(--c-white)', display: 'block', marginBottom: '10px' }}>THE EXCLUSIVE PARTNER PROMISE</strong>
-                                <p style={{ color: '#ccc', margin: 0 }}>
+                            <div className={styles.promiseBox}>
+                                <strong className={styles.promiseTitle}>THE EXCLUSIVE PARTNER PROMISE</strong>
+                                <p className={styles.promiseText}>
                                     We represent ONE roofing company per tier/territory.
                                 </p>
                             </div>
                         </div>
                         <div>
                             <Image
-                                src="/images/roofing-marketing-hero.png"
-                                alt="Roofing Marketing Data Visualization"
+                                src="/images/roofing-marketing-storm-damage-leads-system.png"
+                                alt="Roofing Marketing Storm Damage Leads System"
                                 width={600}
                                 height={400}
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    border: '1px solid #333',
-                                    borderRadius: '4px',
-                                    boxShadow: '0 0 30px rgba(0,0,0,0.5)'
-                                }}
+                                className={styles.serviceIntroImage}
                             />
                         </div>
                     </div>

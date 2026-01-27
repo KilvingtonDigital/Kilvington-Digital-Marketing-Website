@@ -11,19 +11,19 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroBackground}>
           <Image
-            src="/images/hero-bg-neon.png"
-            alt="Digital Agency Architecture"
+            src="/images/kilvington-digital-marketing-neon-cyberpunk-background.png"
+            alt="Kilvington Digital Marketing Neon Cyberpunk Background"
             fill
             className={styles.heroImage}
             priority
           />
         </div>
         <div className={`container ${styles.heroContent}`}>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className={styles.heroLogoWrapper}>
             <div className={styles.heroLogo}>
               <Image
-                src="/images/logo-white.png"
-                alt="Kilvington Digital Marketing"
+                src="/images/kilvington-digital-marketing-logo-white.png"
+                alt="Kilvington Digital Marketing Logo"
                 width={400}
                 height={160}
                 className={styles.heroLogoImage}
@@ -49,8 +49,8 @@ export default function Home() {
         <div className={`container ${styles.ownerGrid}`}>
           <div className={styles.ownerImageWrapper}>
             <Image
-              src="/images/owner-ricky.png"
-              alt="Ricky Kilvington"
+              src="/images/ricky-kilvington-digital-marketing-founder.png"
+              alt="Ricky Kilvington Digital Marketing Founder"
               fill
               className={styles.ownerImage}
             />
@@ -60,7 +60,7 @@ export default function Home() {
             <blockquote className={styles.ownerQuote}>
               &quot;ROI is the only metric that matters. It isn&apos;t just about brand awareness; it&apos;s about converting business leads into strong revenue.&quot;
             </blockquote>
-            <p className={styles.textLg} style={{ color: 'var(--c-white)' }}>
+            <p className={`${styles.textLg} ${styles.ownerInfo}`}>
               <strong>Ricky Kilvington</strong><br />
               <span className={styles.accentText}>Founder & Lead Strategist</span>
             </p>
@@ -78,7 +78,7 @@ export default function Home() {
               As disciplined market strategists, we understand that every dollar spent must yield a return.
             </p>
             <p className={`${styles.textLg} ${styles.blackText}`}>
-              Our proprietary <strong style={{ color: 'var(--c-green-acid)', backgroundColor: 'black', padding: '0 4px' }}>Exclusive Focus</strong> model ensures we never work with your competitors.
+              Our proprietary <strong className={styles.exclusiveFocus}>Exclusive Focus</strong> model ensures we never work with your competitors.
               You handle your business; let us handle getting the right people to your website.
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="container">
           <div className={styles.servicesIntro}>
             <h2 className={`${styles.whiteText} ${styles.headingLg}`}>PRACTICAL INFRASTRUCTURE</h2>
-            <p className={`${styles.textLg} ${styles.whiteText}`} style={{ opacity: 0.7 }}>Mobile-first designs built for speed, SEO, and real-world effectiveness.</p>
+            <p className={`${styles.textLg} ${styles.whiteText} ${styles.servicesText}`}>Mobile-first designs built for speed, SEO, and real-world effectiveness.</p>
           </div>
 
           <div className={styles.servicesGrid}>

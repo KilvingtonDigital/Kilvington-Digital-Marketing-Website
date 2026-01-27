@@ -73,6 +73,8 @@
     border: 1px solid #333;
     position: relative;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
 }
 
 .coreCard:hover {
@@ -110,6 +112,13 @@
     z-index: 1;
 }
 
+.coreLink {
+    color: var(--c-green-acid);
+    font-size: 0.9rem;
+    margin-top: 15px;
+    display: block;
+}
+
 /* Arsenal Section */
 .arsenalSection {
     background-color: var(--c-grey-light);
@@ -125,11 +134,10 @@
 .arsenalCard {
     background: var(--c-white);
     padding: 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    display: block;
     border: 1px solid #ddd;
     transition: all 0.2s ease;
+    text-decoration: none;
 }
 
 .arsenalCard:hover {
@@ -140,6 +148,59 @@
 .arsenalIcon {
     color: var(--c-green-acid);
     font-size: 1.2rem;
+}
+
+.arsenalDesc {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.ethicsSection {
+    padding: 80px 0;
+    border-top: 1px solid #222;
+    background: #050505;
+}
+
+.ethicsContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ethicsHeading {
+    margin-bottom: 20px;
+    color: var(--c-white);
+}
+
+.ethicsText {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.ethicsBox {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 4px;
+    border-left: 3px solid var(--c-green-acid);
+}
+
+.ethicsDesc {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ethicsDescLast {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.whiteText {
+    color: #fff;
 }
 
 .arsenalTitle {
