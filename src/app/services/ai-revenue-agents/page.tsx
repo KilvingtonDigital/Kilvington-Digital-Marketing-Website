@@ -5,8 +5,8 @@ import Link from 'next/link';
 import styles from '../core-service.module.css';
 
 export const metadata: Metadata = {
-    title: "AI Revenue Agents (AIO) | Kilvington Digital Marketing",
-    description: "Automate your sales pipeline with AI Revenue Agents. 24/7 lead qualification and instant response.",
+    title: "AIO Services & AI Revenue Agents | Kilvington Digital",
+    description: "Maximize conversion with AIO (Artificial Intelligence Optimization). Deploy 24/7 AI Revenue Agents for instant lead qualification, booking automation, and sales pipeline management.",
 };
 
 import ServiceSchema from '../../../components/ServiceSchema';
@@ -95,6 +95,29 @@ export default function AIOPage() {
                         <li className={styles.benefitItem}>Increase conversion rates on existing traffic</li>
                         <li className={styles.benefitItem}>Operate 24/7/365 without breaks</li>
                     </ul>
+                </div>
+            </section>
+
+            {/* Deep Dive: Technical Specifications */}
+            <section className={styles.deepDiveSection}>
+                <div className="container">
+                    <h2 className={styles.deepDiveHeading}>ARCHITECTING AUTOMATED REVENUE</h2>
+                    <div className={styles.deepDiveContent}>
+                        <h3 className={styles.deepDiveSubHeading}>BEYOND CHATBOTS: AUTONOMOUS AGENTS</h3>
+                        <p className={styles.deepDiveText}>
+                            Traditional chatbots are decision trees (If X, then Y). They frustrate users. Our AI Revenue Agents use Natural Language Understanding (NLU) to hold actual conversations. They understand context, nuance, and intent. Whether a lead asks about pricing, availability, or specific technical details, the agent responds intelligently, referencing your specific knowledge base.
+                        </p>
+
+                        <h3 className={styles.deepDiveSubHeading}>FULL-CYCLE CRM INTEGRATION</h3>
+                        <p className={styles.deepDiveText}>
+                            AIO isn&apos;t just about chatting; it&apos;s about data hygiene. Every interaction is transcribed, summarized, and injected into your CRM (Salesforce, HubSpot, GoHighLevel). The agent tags the lead based on intent (e.g., &quot;High Ticket - Ready to Buy&quot; vs &quot;Information Seeking&quot;), prioritizing your sales team&apos;s time for the leads that actually convert.
+                        </p>
+
+                        <h3 className={styles.deepDiveSubHeading}>THE 24/7 CONVERSION LOOP</h3>
+                        <p className={styles.deepDiveText}>
+                            The modern consumer expects instant gratification. By removing human latency from the initial touchpoint, we drastically increase conversion rates. Your business generates revenue while you sleep, literally. The agent handles the booking, sends the calendar invite, and even collects the deposit if required, creating a frictionless path to purchase.
+                        </p>
+                    </div>
                 </div>
             </section>
 

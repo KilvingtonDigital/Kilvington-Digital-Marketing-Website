@@ -22,11 +22,11 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Kilvington Digital Marketing | Exclusive ROI-Focused Agency",
-  description: "Kilvington Digital Marketing provides exclusive, high-ROI digital solutions for conservative businesses. One client per industry, per territory. Maximum results.",
+  title: "Kilvington Digital | SEO Services, GEO & AIO Agency (NC)",
+  description: "Premier Digital Marketing Agency specializing in Technical SEO, Generative Engine Optimization (GEO), and AI Revenue Agents (AIO). We build high-performance revenue engines. One client per industry, per territory.",
   openGraph: {
-    title: "Kilvington Digital Marketing",
-    description: "Exclusive Focus. Maximum Results.",
+    title: "Kilvington Digital | SEO Services, GEO & AIO Agency",
+    description: "Exclusive Focus. Maximum Results. Specializing in Technical SEO, GEO, and AI Revenue Agents.",
     type: "website",
   },
 };

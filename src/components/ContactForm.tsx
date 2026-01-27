@@ -27,7 +27,7 @@ export default function ContactForm() {
                 } else {
                     alert('Failed to send inquiry. Please try again.');
                 }
-            } catch (error) {
+            } catch {
                 alert('An error occurred. Please try again later.');
             }
         }}>

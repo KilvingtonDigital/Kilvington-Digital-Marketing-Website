@@ -18,7 +18,7 @@ export default function Marquee({ items, speed = 30 }: MarqueeProps) {
                 {displayItems.map((item, index) => (
                     <span key={index} className={styles.item}>
                         {item}
-                        <span className={styles.separator}>//</span>
+                        <span className={styles.separator}>{'//'}</span>
                     </span>
                 ))}
             </div>

@@ -18,7 +18,7 @@ export default function IndustriesHubPage() {
                     <span className={styles.label}>SECTOR EXPERTISE</span>
                     <h1 className={styles.title}>CHOOSE YOUR INDUSTRY</h1>
                     <p className={styles.subtitle}>
-                        We don't specialize in "marketing". We specialize in revenue models for specific high-ticket trades.
+                        We don&apos;t specialize in &quot;marketing&quot;. We specialize in revenue models for specific high-ticket trades.
                         Select your sector to see how we engineer dominance.
                     </p>
                 </div>
@@ -92,7 +92,7 @@ export default function IndustriesHubPage() {
                             </div>
                             <h3 className={styles.featureTitle}>ROOFING & STORM</h3>
                             <p className={styles.featureDesc}>
-                                Capture high-value insurance claims and retail replacements with "Storm Response" site infrastructure.
+                                Capture high-value insurance claims and retail replacements with &quot;Storm Response&quot; site infrastructure.
                             </p>
                             <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
                         </Link>
@@ -109,7 +109,7 @@ export default function IndustriesHubPage() {
                             </div>
                             <h3 className={styles.featureTitle}>HVAC SERVICES</h3>
                             <p className={styles.featureDesc}>
-                                Win the race for "AC Repair" with high-speed mobile pages and automated booking agents.
+                                Win the race for &quot;AC Repair&quot; with high-speed mobile pages and automated booking agents.
                             </p>
                             <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
                         </Link>
@@ -177,7 +177,7 @@ export default function IndustriesHubPage() {
                             </div>
                             <h3 className={styles.featureTitle}>MOLD REMEDIATION</h3>
                             <p className={styles.featureDesc}>
-                                Capture urgent "Black Mold" searches. Position your brand as the health authority homeowners trust.
+                                Capture urgent &quot;Black Mold&quot; searches. Position your brand as the health authority homeowners trust.
                             </p>
                             <span className={`btn btn-secondary ${styles.industryButton}`}>EXPLORE STRATEGY →</span>
                         </Link>
@@ -189,7 +189,7 @@ export default function IndustriesHubPage() {
             {/* CTA */}
             <section className={styles.ctaSection}>
                 <div className="container">
-                    <h2 className={styles.introHeading}>DON'T SEE YOUR INDUSTRY?</h2>
+                    <h2 className={styles.introHeading}>DON&apos;T SEE YOUR INDUSTRY?</h2>
                     <p className={styles.subtitle}>
                         We occasionally accept partners in other high-ticket verticals if the economics make sense.
                     </p>

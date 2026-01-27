@@ -93,19 +93,11 @@ export default function Navigation() {
                 </Link>
                 <button
                     onClick={openModal}
-                    className={styles.mobileLink}
-                    style={{
-                        color: 'var(--c-green-acid)',
-                        background: 'none',
-                        border: 'none',
-                        textAlign: 'left',
-                        cursor: 'pointer',
-                        padding: 0
-                    }}
+                    className={`${styles.mobileLink} ${styles.mobileCta}`}
                 >
                     CHECK AVAILABILITY
                 </button>
-            </div>
+            </div >
 
             <TerritoryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </>

@@ -3,8 +3,8 @@ import Link from 'next/link';
 import styles from './services.module.css';
 
 export const metadata: Metadata = {
-    title: "Services | Kilvington Digital Marketing",
-    description: "Advanced SEO, Generative Engine Optimization (GEO), and AI-Marketing solutions for North Carolina service businesses.",
+    title: "Digital Marketing Services: SEO, GEO & AIO | Kilvington Digital",
+    description: "Comprehensive digital services: Technical SEO Infrastructure, Generative Engine Optimization (GEO), and AI Revenue Agents (AIO). Engineered for market dominance.",
 };
 
 export default function Services() {

@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import styles from './TerritoryModal.module.css';
 
+import { submitTerritoryCheck } from '../app/actions';
+
 interface TerritoryModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -97,6 +99,10 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
         checkAvailability(formData.industry, selectedCounty);
     };
 
+
+
+    // ... (keep surrounding code)
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -107,32 +113,32 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
         if (territoryStatus?.message.includes('TERRITORY SECURED')) {
             alert(`Notice: ${finalCounty} is currently secured for ${finalIndustry}. You have been added to the priority waitlist.`);
             onClose();
-            // Still send data for waitlist
+            // In a real app, we'd still submit this as a "Waitlist" entry.
+            // For now, we proceed to submit it so the owner knows.
         }
 
-        const data = {
-            ...formData,
-            industry: finalIndustry,
-            territory: finalCounty, // Mapping county to territory for email clarity
-            message: `Territory Check: ${territoryStatus?.message || 'Check Request'}`
-        };
+        const formDataToSend = new FormData();
+        formDataToSend.append('name', formData.name);
+        formDataToSend.append('email', formData.email);
+        formDataToSend.append('company', formData.company);
+        formDataToSend.append('website', formData.website);
+        formDataToSend.append('location', formData.location);
+        formDataToSend.append('industry', finalIndustry);
+        formDataToSend.append('county', finalCounty);
 
         try {
-            const response = await fetch('/api/send', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-            });
+            const result = await submitTerritoryCheck(null, formDataToSend);
 
-            if (response.ok) {
+            if (result.success) {
                 if (!territoryStatus?.message.includes('TERRITORY SECURED')) {
                     alert(`Request received for ${finalIndustry} in ${finalCounty}. We are verifying availability.`);
                     onClose();
                 }
             } else {
-                alert('Failed to send request. Please try again.');
+                alert(result.message || 'Failed to send request. Please try again.');
             }
         } catch (_error) {
+            console.error(_error);
             alert('An error occurred. Please try again later.');
         }
     };
@@ -142,9 +148,15 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
     };
 
     return (
-        <div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}>
-            <div className={styles.modal}>
-                <button className={styles.closeButton} onClick={onClose}>✕</button>
+        <div className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`} onClick={onClose}>
+            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+                <button
+                    className={styles.closeButton}
+                    onClick={onClose}
+                    aria-label="Close Modal"
+                >
+                    ✕
+                </button>
 
                 <h2 className={styles.title}>SECURE YOUR TERRITORY</h2>
                 <p className={styles.subtitle}>
@@ -153,8 +165,9 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
 
                 <form onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
-                        <label className={styles.label}>Full Name</label>
+                        <label htmlFor="name" className={styles.label}>Full Name</label>
                         <input
+                            id="name"
                             type="text"
                             name="name"
                             className={styles.input}
@@ -164,8 +177,9 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                     </div>
 
                     <div className={styles.formGroup}>
-                        <label className={styles.label}>Business Name</label>
+                        <label htmlFor="company" className={styles.label}>Business Name</label>
                         <input
+                            id="company"
                             type="text"
                             name="company"
                             className={styles.input}
@@ -176,8 +190,9 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
 
                     <div className={styles.gridRow}>
                         <div className={styles.formGroup}>
-                            <label className={styles.label}>Industry</label>
+                            <label htmlFor="industry" className={styles.label}>Industry</label>
                             <select
+                                id="industry"
                                 name="industry"
                                 className={styles.input}
                                 required
@@ -198,18 +213,21 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                             </select>
                             {formData.industry === 'Other' && (
                                 <input
+                                    id="customIndustry"
                                     type="text"
                                     name="customIndustry"
                                     placeholder="Enter Industry..."
                                     className={`${styles.input} ${styles.customInput}`}
                                     required
                                     onChange={handleChange}
+                                    title="Custom Industry"
                                 />
                             )}
                         </div>
                         <div className={styles.formGroup}>
-                            <label className={styles.label}>Target Territory</label>
+                            <label htmlFor="county" className={styles.label}>Target Territory</label>
                             <select
+                                id="county"
                                 name="county"
                                 className={styles.input}
                                 required
@@ -321,12 +339,14 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                             </select>
                             {formData.county === 'Other' && (
                                 <input
+                                    id="customCounty"
                                     type="text"
                                     name="customCounty"
                                     placeholder="Enter City/State..."
                                     className={`${styles.input} ${styles.customInput}`}
                                     required
                                     onChange={handleChange}
+                                    title="Custom County"
                                 />
                             )}
                         </div>
@@ -345,8 +365,9 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                     )}
 
                     <div className={styles.formGroup}>
-                        <label className={styles.label}>Website URL <span className={styles.labelOptional}>(Optional)</span></label>
+                        <label htmlFor="website" className={styles.label}>Website URL <span className={styles.labelOptional}>(Optional)</span></label>
                         <input
+                            id="website"
                             type="text"
                             name="website"
                             className={styles.input}
@@ -357,8 +378,9 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
 
                     <div className={styles.gridRow}>
                         <div className={styles.formGroup}>
-                            <label className={styles.label}>Email Address</label>
+                            <label htmlFor="email" className={styles.label}>Email Address</label>
                             <input
+                                id="email"
                                 type="email"
                                 name="email"
                                 className={styles.input}
@@ -367,8 +389,9 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                             />
                         </div>
                         <div className={styles.formGroup}>
-                            <label className={styles.label}>Specific City (HQ)</label>
+                            <label htmlFor="location" className={styles.label}>Specific City (HQ)</label>
                             <input
+                                id="location"
                                 type="text"
                                 name="location"
                                 className={styles.input}

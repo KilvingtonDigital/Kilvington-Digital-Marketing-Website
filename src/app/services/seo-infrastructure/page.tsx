@@ -5,8 +5,8 @@ import Link from 'next/link';
 import styles from '../core-service.module.css';
 
 export const metadata: Metadata = {
-    title: "SEO Infrastructure | Kilvington Digital Marketing",
-    description: "Technical SEO services engineered for domination. We build the infrastructure that ranks #1.",
+    title: "Technical SEO Services & Infrastructure | Kilvington Digital",
+    description: "Dominate search rankings with our advanced Technical SEO Infrastructure. We engineer site architecture, schema markup, and speed for maximum visibility in Google and AI search engines.",
 };
 
 import ServiceSchema from '../../../components/ServiceSchema';
@@ -95,6 +95,29 @@ export default function SEOInfrastructurePage() {
                         <li className={styles.benefitItem}>Future-proofs your site for algorithm updates</li>
                         <li className={styles.benefitItem}>Provides the base for Content & AI scaling</li>
                     </ul>
+                </div>
+            </section>
+
+            {/* Deep Dive: Technical Specifications */}
+            <section className={styles.deepDiveSection}>
+                <div className="container">
+                    <h2 className={styles.deepDiveHeading}>THE MECHANICS OF DIGITAL DOMINANCE</h2>
+                    <div className={styles.deepDiveContent}>
+                        <h3 className={styles.deepDiveSubHeading}>CORE WEB VITALS & SPEED ARCHITECTURE</h3>
+                        <p className={styles.deepDiveText}>
+                            Google has explicitly stated that page experience is a ranking factor. Our infrastructure is built on Next.js, a React framework that allows for server-side rendering (SSR) and static site generation (SSG). This means your site loads instantly, passing Core Web Vitals with green scores across the board. We eliminate &quot;render-blocking resources&quot; and optimize First Contentful Paint (FCP) to under 1.2 seconds.
+                        </p>
+
+                        <h3 className={styles.deepDiveSubHeading}>SCHEMA MARKUP & SEMANTIC HTML5</h3>
+                        <p className={styles.deepDiveText}>
+                            We don&apos;t just write text; we write code that machines understand. We implement extensive JSON-LD Schema markup (LocalBusiness, Service, Review, FAQPage, Organization) to feed Google&apos;s Knowledge Graph directly. This &quot;spoon-feeding&quot; strategy ensures rich snippets in search results—star ratings, pricing tables, and FAQ drop-downs that steal click-through rate (CTR) from competitors.
+                        </p>
+
+                        <h3 className={styles.deepDiveSubHeading}>AUTHORITY & LINK VELOCITY</h3>
+                        <p className={styles.deepDiveText}>
+                            Ranking requiring Authority. We audit your backlink profile and disavow toxic assets while building a clean, topical internal linking structure. By clustering content around core &quot;pillar&quot; pages (like this one), we signal to search algorithms that you are the topical authority for your specific industry vertical in your specific territory.
+                        </p>
+                    </div>
                 </div>
             </section>
 
