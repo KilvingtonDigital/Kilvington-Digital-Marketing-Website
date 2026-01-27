@@ -10,8 +10,24 @@ export const metadata: Metadata = {
 };
 
 import ServiceSchema from '../../../components/ServiceSchema';
+import FAQSchema from '../../../components/FAQSchema';
 
 export default function SEOInfrastructurePage() {
+    const faqs = [
+        {
+            question: "Why does site speed matter for SEO?",
+            answer: "Google has confirmed that Core Web Vitals (speed, stability, responsiveness) are a direct ranking factor. A site that loads in under 1.2 seconds significantly outperforms slower competitors in search rankings and conversion rates."
+        },
+        {
+            question: "What is Schema Markup?",
+            answer: "Schema Markup (JSON-LD) is code that helps search engines understand your content. It powers 'rich snippets' like star ratings, FAQs, and pricing tables in search results, increasing your click-through rate."
+        },
+        {
+            question: "How long does it take to see results?",
+            answer: "Technical infrastructure fixes often show results within 2-4 weeks as Google crawls the improved site. Authority building is a longer-term play that compounds over months."
+        }
+    ];
+
     return (
         <div className="page-wrapper">
             <ServiceSchema
@@ -20,6 +36,7 @@ export default function SEOInfrastructurePage() {
                 url="https://kilvington.digital/services/seo-infrastructure"
                 serviceType="Technical SEO Service"
             />
+            <FAQSchema faqs={faqs} />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -117,6 +134,21 @@ export default function SEOInfrastructurePage() {
                         <p className={styles.deepDiveText}>
                             Ranking requiring Authority. We audit your backlink profile and disavow toxic assets while building a clean, topical internal linking structure. By clustering content around core &quot;pillar&quot; pages (like this one), we signal to search algorithms that you are the topical authority for your specific industry vertical in your specific territory.
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className={styles.faqSection}>
+                <div className={`container ${styles.faqContainer}`}>
+                    <h2 className={styles.faqHeading}>COMMON QUESTIONS</h2>
+                    <div className={styles.faqList}>
+                        {faqs.map((faq, index) => (
+                            <div key={index} className={styles.faqItem}>
+                                <h3 className={styles.faqQuestion}>{faq.question}</h3>
+                                <p className={styles.faqAnswer}>{faq.answer}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

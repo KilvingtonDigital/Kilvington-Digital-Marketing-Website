@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${baseUrl}/ai-context`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
-            priority: 0.5,
+            priority: 0.9,
         },
 
         // Services Main

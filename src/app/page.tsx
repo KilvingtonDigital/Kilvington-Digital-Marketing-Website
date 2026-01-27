@@ -36,7 +36,7 @@ export default function Home() {
             <span className={styles.accentText}>MAXIMUM RESULTS.</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            We engineer high-performance revenue engines for exclusively selected partners. Just real, measurable results.
+            We engineer high-performance <strong>SEO, GEO, and AI Revenue systems</strong> for exclusively selected partners. Just real, measurable results.
           </p>
           <div className={styles.heroButtons}>
             <Link href="/contact" className="btn btn-primary">Calculate Your ROI</Link>
@@ -110,20 +110,20 @@ export default function Home() {
 
           <div className={styles.servicesGrid}>
             {/* Card 1 */}
-            <div className={styles.card}>
+            <Link href="/services/web-development" className={styles.card} style={{ textDecoration: 'none' }}>
               <h3 className={styles.cardTitle}>PREMIUM WEB DESIGN</h3>
               <p style={{ color: '#ccc' }}>Fluid, brand-aware architectures that look stunning on mobile and desktop alike. Built to represent your premium status.</p>
-            </div>
+            </Link>
             {/* Card 2 */}
-            <div className={styles.card}>
+            <Link href="/services/seo-infrastructure" className={styles.card} style={{ textDecoration: 'none' }}>
               <h3 className={styles.cardTitle}>TECHNICAL SEO</h3>
               <p style={{ color: '#ccc' }}>Deep foundational SEO strategies applied to every page. We verify that AI and Search Engines understand your business perfectly.</p>
-            </div>
+            </Link>
             {/* Card 3 */}
-            <div className={styles.card}>
+            <Link href="/services/ai-revenue-agents" className={styles.card} style={{ textDecoration: 'none' }}>
               <h3 className={styles.cardTitle}>LEAD CONVERSION</h3>
               <p style={{ color: '#ccc' }}>We turn traffic into paying customers. Our disciplined approach focuses on high-intent leads that drive revenue.</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

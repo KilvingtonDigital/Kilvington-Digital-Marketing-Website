@@ -10,8 +10,24 @@ export const metadata: Metadata = {
 };
 
 import ServiceSchema from '../../../components/ServiceSchema';
+import FAQSchema from '../../../components/FAQSchema';
 
 export default function AIOPage() {
+    const faqs = [
+        {
+            question: "Are AI Agents the same as Chatbots?",
+            answer: "No. Chatbots follow simple scripts. AI Revenue Agents use Natural Language Understanding (NLU) to hold complex conversations, overcome objections, and integrate directly with your CRM/Calendar to close deals."
+        },
+        {
+            question: "How does AIO increase revenue?",
+            answer: "AIO eliminates 'Speed to Lead' latency. By engaging leads instantly (within seconds) 24/7, you capture high-intent customers before they contact your competitors, drastically increasing conversion rates."
+        },
+        {
+            question: "Does the AI sound robotic?",
+            answer: "No. Our agents are trained on your specific brand voice and use natural phrasing. Most customers do not realize they are speaking with an AI until the booking is confirmed."
+        }
+    ];
+
     return (
         <div className="page-wrapper">
             <ServiceSchema
@@ -20,6 +36,7 @@ export default function AIOPage() {
                 url="https://kilvington.digital/services/ai-revenue-agents"
                 serviceType="AI Automation"
             />
+            <FAQSchema faqs={faqs} />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -117,6 +134,21 @@ export default function AIOPage() {
                         <p className={styles.deepDiveText}>
                             The modern consumer expects instant gratification. By removing human latency from the initial touchpoint, we drastically increase conversion rates. Your business generates revenue while you sleep, literally. The agent handles the booking, sends the calendar invite, and even collects the deposit if required, creating a frictionless path to purchase.
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className={styles.faqSection}>
+                <div className={`container ${styles.faqContainer}`}>
+                    <h2 className={styles.faqHeading}>COMMON QUESTIONS</h2>
+                    <div className={styles.faqList}>
+                        {faqs.map((faq, index) => (
+                            <div key={index} className={styles.faqItem}>
+                                <h3 className={styles.faqQuestion}>{faq.question}</h3>
+                                <p className={styles.faqAnswer}>{faq.answer}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

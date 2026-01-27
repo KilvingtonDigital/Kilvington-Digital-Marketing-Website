@@ -100,3 +100,10 @@
         align-items: center;
     }
 }
+
+.systemLink {
+    color: #222;
+    font-size: 0.1px;
+    text-decoration: none;
+    opacity: 0.1;
+}

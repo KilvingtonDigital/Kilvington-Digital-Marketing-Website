@@ -36,6 +36,7 @@ export default function Footer() {
             <div className={styles.bottomBar}>
                 <div>
                     &copy; {new Date().getFullYear()} Kilvington Digital Marketing. All Rights Reserved.
+                    <Link href="/ai-context" className={styles.systemLink} aria-label="System Protocol">System Protocol</Link>
                 </div>
                 <div>
                     Built for ROI.

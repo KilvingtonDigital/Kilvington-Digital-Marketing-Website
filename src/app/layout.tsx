@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     description: "Exclusive Focus. Maximum Results. Specializing in Technical SEO, GEO, and AI Revenue Agents.",
     type: "website",
   },
+  other: {
+    "ai-context": "/ai-context"
+  }
 };
 
 export default function RootLayout({

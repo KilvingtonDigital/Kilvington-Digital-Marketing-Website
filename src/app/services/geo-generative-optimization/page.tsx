@@ -10,8 +10,24 @@ export const metadata: Metadata = {
 };
 
 import ServiceSchema from '../../../components/ServiceSchema';
+import FAQSchema from '../../../components/FAQSchema';
 
 export default function GEOPage() {
+    const faqs = [
+        {
+            question: "How do I rank on ChatGPT and Perplexity?",
+            answer: "AI models rank businesses based on 'Entity Authority' and structured data. We optimize your digital footprint (citations, schema, reviews) so these models trust your business as a factual answer."
+        },
+        {
+            question: "What is the difference between SEO and GEO?",
+            answer: "SEO targets traditional search engines like Google (blue links). GEO (Generative Engine Optimization) targets AI models that provide direct answers. You need both to dominate the modern search landscape."
+        },
+        {
+            question: "Is GEO necessary for local businesses?",
+            answer: "Yes. Voice search (Siri, Alexa) and AI tools are rapidly replacing traditional search for queries like 'best plumber near me'. Being the recommended entity is critical for future revenue."
+        }
+    ];
+
     return (
         <div className="page-wrapper">
             <ServiceSchema
@@ -20,6 +36,7 @@ export default function GEOPage() {
                 url="https://kilvington.digital/services/geo-generative-optimization"
                 serviceType="Search Engine Optimization Service"
             />
+            <FAQSchema faqs={faqs} />
             {/* Hero */}
             <section className={styles.hero}>
                 <div className={`container ${styles.heroContent}`}>
@@ -117,6 +134,21 @@ export default function GEOPage() {
                         <p className={styles.deepDiveText}>
                             LLMs are sensitive to sentiment. A high volume of positive, context-rich reviews across multiple platforms (Google, Facebook, BBQ, Industry Directories) signals to the AI that your entity is a &quot;safe&quot; recommendation. We automate the collection of these signals to ensure your brand sentiment remains overwhelmingly positive in the data lake.
                         </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className={styles.faqSection}>
+                <div className={`container ${styles.faqContainer}`}>
+                    <h2 className={styles.faqHeading}>COMMON QUESTIONS</h2>
+                    <div className={styles.faqList}>
+                        {faqs.map((faq, index) => (
+                            <div key={index} className={styles.faqItem}>
+                                <h3 className={styles.faqQuestion}>{faq.question}</h3>
+                                <p className={styles.faqAnswer}>{faq.answer}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

@@ -1,5 +1,42 @@
 /* Shared styles for Core Pillar Service Pages */
 
+/* FAQ Section */
+.faqSection {
+    padding: 80px 0;
+    background: #0a0a0a;
+    border-top: 1px solid #222;
+}
+
+.faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faqHeading {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--c-white);
+    margin-bottom: 40px;
+}
+
+.faqItem {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.faqQuestion {
+    font-size: 1.2rem;
+    color: var(--c-white);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.faqAnswer {
+    color: #ccc;
+    line-height: 1.6;
+}
+
 .hero {
     padding: 180px 0 100px;
     background-color: var(--c-black);
