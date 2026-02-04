@@ -1,8 +1,12 @@
 'use client';
 
+import { useState } from 'react';
+
 import styles from '../app/contact/contact.module.css';
 
 export default function ContactForm() {
+    const [startTime] = useState(() => Date.now());
+
     return (
         <form className={styles.form} onSubmit={async (e) => {
             e.preventDefault();
@@ -12,6 +16,9 @@ export default function ContactForm() {
                 company: formData.get('company'),
                 email: formData.get('email'),
                 message: formData.get('message'),
+                // Anti-Spam Fields
+                role_title_check: formData.get('role_title_check'),
+                submission_time: Date.now() - startTime
             };
 
             try {
@@ -31,6 +38,17 @@ export default function ContactForm() {
                 alert('An error occurred. Please try again later.');
             }
         }}>
+            {/* Honeypot Field - Hidden from humans */}
+            <div className={styles.honeyPot} aria-hidden="true">
+                <input
+                    type="text"
+                    name="role_title_check"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    placeholder="Job Title"
+                />
+            </div>
+
             <div className={styles.formGroup}>
                 <label className={styles.label}>Name</label>
                 <input name="name" type="text" className={styles.input} required placeholder="Enter your name" />

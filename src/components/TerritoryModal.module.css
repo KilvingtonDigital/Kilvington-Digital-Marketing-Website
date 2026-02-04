@@ -190,3 +190,9 @@
     border-radius: 4px;
     border: 1px solid transparent;
 }
+
+.honeyPot {
+    display: none;
+    position: absolute;
+    left: -9999px;
+}

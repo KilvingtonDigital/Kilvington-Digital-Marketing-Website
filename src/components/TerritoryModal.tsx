@@ -20,7 +20,8 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
         county: '',
         industry: '',
         customIndustry: '',
-        customCounty: ''
+        customCounty: '',
+        internal_control_code: ''
     });
 
     const [territoryStatus, setTerritoryStatus] = useState<{ message: string; color: string } | null>(null);
@@ -125,6 +126,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
         formDataToSend.append('location', formData.location);
         formDataToSend.append('industry', finalIndustry);
         formDataToSend.append('county', finalCounty);
+        formDataToSend.append('internal_control_code', formData.internal_control_code);
 
         try {
             const result = await submitTerritoryCheck(null, formDataToSend);
@@ -164,6 +166,18 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                 </p>
 
                 <form onSubmit={handleSubmit}>
+                    {/* Honeypot Field - Hidden from humans */}
+                    <div className={styles.honeyPot} aria-hidden="true">
+                        <input
+                            type="text"
+                            name="internal_control_code"
+                            tabIndex={-1}
+                            autoComplete="off"
+                            placeholder="Do not fill this out"
+                            onChange={handleChange}
+                        />
+                    </div>
+
                     <div className={styles.formGroup}>
                         <label htmlFor="name" className={styles.label}>Full Name</label>
                         <input

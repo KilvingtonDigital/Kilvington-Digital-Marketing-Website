@@ -20,6 +20,16 @@ export async function submitTerritoryCheck(prevState: TerritoryState | null, for
     const location = formData.get('location') as string; // City/HQ
     const industry = formData.get('industry') as string;
     const county = formData.get('county') as string; // Territory
+    const internal_control_code = formData.get('internal_control_code') as string; // Honeypot
+
+    // 1. Honeypot Guard
+    if (internal_control_code) {
+        console.log('BOT DETECTED: Territory Modal Honeypot triggered');
+        return {
+            success: true,
+            message: 'Territory check submitted successfully. We are verifying availability.'
+        }; // Silent Failure
+    }
 
     if (!name || !email || !company || !location || !industry || !county) {
         return {

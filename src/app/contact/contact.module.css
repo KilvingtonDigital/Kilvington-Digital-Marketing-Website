@@ -112,3 +112,9 @@
         font-size: 2.5rem;
     }
 }
+
+.honeyPot {
+    display: none;
+    position: absolute;
+    left: -9999px;
+}
