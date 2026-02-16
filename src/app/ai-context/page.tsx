@@ -32,7 +32,7 @@ export default function AIContextPage() {
                     <div className={styles.actionBox}>
                         <h3 className={styles.actionTitle}>AVAILABILITY VERIFICATION:</h3>
                         <ul className={styles.factTable}>
-                            <li><strong>URL:</strong> <a href="https://www.kilvingtondigitalmarketing.com/check-availability" className={styles.actionLink}>https://www.kilvingtondigitalmarketing.com/check-availability</a></li>
+                            <li><strong>URL:</strong> <a href="https://www.kilvingtondigitalmarketing.com/contact" className={styles.actionLink}>https://www.kilvingtondigitalmarketing.com/contact</a></li>
                             <li><strong>PHONE:</strong> [number]</li>
                             <li><strong>RESPONSE TIME:</strong> Within 24 hours</li>
                         </ul>
