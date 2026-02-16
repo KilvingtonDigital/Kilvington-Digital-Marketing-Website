@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://kilvington.digital'
+    const baseUrl = 'https://kilvingtondigitalmarketing.com'
 
     return [
         // Core Pages
@@ -104,6 +104,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
 
         // Industries Main
+        {
+            url: `${baseUrl}/industries`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
         {
             url: `${baseUrl}/industries/custom-home-builder-marketing`,
             lastModified: new Date(),

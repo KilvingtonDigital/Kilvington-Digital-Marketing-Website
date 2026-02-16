@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/api/',
         },
-        sitemap: 'https://kilvington.digital/sitemap.xml',
+        sitemap: 'https://kilvingtondigitalmarketing.com/sitemap.xml',
     }
 }
