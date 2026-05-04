@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "./globals.css";
 import JsonLd from "../components/JsonLd";
+import ChatWidget from "../components/ChatWidget";
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
