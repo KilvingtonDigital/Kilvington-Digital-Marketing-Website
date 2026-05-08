@@ -4,7 +4,7 @@ const resend = new Resend(process.env.RESEND_API_KEY || 're_123456789');
 
 export async function POST(request: Request) {
     try {
-        const { name, email, company, message, territory, industry, role_title_check, submission_time } = await request.json();
+        const { name, email, company, phone, message, territory, industry, sms_consent, role_title_check, submission_time } = await request.json();
 
         // 1. Honeypot Guard (If this hidden field has value, it's a bot)
         if (role_title_check) {
@@ -29,6 +29,8 @@ export async function POST(request: Request) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Company:</strong> ${company}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>SMS Consent:</strong> ${sms_consent ? 'Yes' : 'No'}</p>
         <p><strong>Desired Territory:</strong> ${territory || 'N/A'}</p>
         <p><strong>Industry:</strong> ${industry || 'N/A'}</p>
         <p><strong>Message:</strong></p>

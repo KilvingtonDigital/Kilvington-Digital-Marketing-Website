@@ -14,6 +14,7 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
         company: '',
         website: '',
         location: '',
@@ -21,7 +22,8 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
         industry: '',
         customIndustry: '',
         customCounty: '',
-        internal_control_code: ''
+        internal_control_code: '',
+        sms_consent: false
     });
 
     const [territoryStatus, setTerritoryStatus] = useState<{ message: string; color: string } | null>(null);
@@ -121,12 +123,14 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
         const formDataToSend = new FormData();
         formDataToSend.append('name', formData.name);
         formDataToSend.append('email', formData.email);
+        formDataToSend.append('phone', formData.phone);
         formDataToSend.append('company', formData.company);
         formDataToSend.append('website', formData.website);
         formDataToSend.append('location', formData.location);
         formDataToSend.append('industry', finalIndustry);
         formDataToSend.append('county', finalCounty);
         formDataToSend.append('internal_control_code', formData.internal_control_code);
+        formDataToSend.append('sms_consent', formData.sms_consent.toString());
 
         try {
             const result = await submitTerritoryCheck(null, formDataToSend);
@@ -403,17 +407,43 @@ export default function TerritoryModal({ isOpen, onClose }: TerritoryModalProps)
                             />
                         </div>
                         <div className={styles.formGroup}>
-                            <label htmlFor="location" className={styles.label}>Specific City (HQ)</label>
+                            <label htmlFor="phone" className={styles.label}>Phone Number</label>
                             <input
-                                id="location"
-                                type="text"
-                                name="location"
+                                id="phone"
+                                type="tel"
+                                name="phone"
                                 className={styles.input}
-                                placeholder="e.g. Apex"
                                 required
                                 onChange={handleChange}
                             />
                         </div>
+                    </div>
+
+                    <div className={styles.formGroup}>
+                        <label htmlFor="location" className={styles.label}>Specific City (HQ)</label>
+                        <input
+                            id="location"
+                            type="text"
+                            name="location"
+                            className={styles.input}
+                            placeholder="e.g. Apex"
+                            required
+                            onChange={handleChange}
+                        />
+                    </div>
+
+                    <div className={styles.formGroup} style={{ flexDirection: 'row', alignItems: 'flex-start', gap: '10px', marginTop: '10px', marginBottom: '10px' }}>
+                        <input
+                            type="checkbox"
+                            name="sms_consent"
+                            id="sms_consent_modal"
+                            required
+                            style={{ marginTop: '5px', transform: 'scale(1.2)' }}
+                            onChange={(e) => setFormData({ ...formData, sms_consent: e.target.checked })}
+                        />
+                        <label htmlFor="sms_consent_modal" className={styles.label} style={{ fontSize: '0.85rem', lineHeight: '1.4', fontWeight: 'normal', textTransform: 'none', cursor: 'pointer' }}>
+                            I consent to receive text messages and emails from Kilvington Digital regarding my inquiry. I understand I can reply STOP to opt out of texts at any time. Message and data rates may apply.
+                        </label>
                     </div>
 
                     <button type="submit" className={styles.submitButton}>CHECK AVAILABILITY</button>
