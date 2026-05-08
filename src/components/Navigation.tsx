@@ -4,12 +4,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Navigation.module.css';
-import TerritoryModal from './TerritoryModal';
 
 export default function Navigation() {
     const [scrolled, setScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -23,12 +21,6 @@ export default function Navigation() {
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
-
-    const openModal = (e: React.MouseEvent) => {
-        e.preventDefault();
-        setIsModalOpen(true);
-        setIsMobileMenuOpen(false); // Close mobile menu if open
     };
 
     return (
@@ -59,12 +51,12 @@ export default function Navigation() {
                         >
                             Case Studies
                         </Link>
-                        <button
-                            onClick={() => setIsModalOpen(true)}
+                        <Link
+                            href="/territory-check"
                             className={styles.cta}
                         >
                             Territory Check
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -91,15 +83,14 @@ export default function Navigation() {
                 <Link href="/about" className={styles.mobileLink} onClick={toggleMobileMenu}>
                     ABOUT
                 </Link>
-                <button
-                    onClick={openModal}
+                <Link
+                    href="/territory-check"
                     className={`${styles.mobileLink} ${styles.mobileCta}`}
+                    onClick={toggleMobileMenu}
                 >
                     CHECK AVAILABILITY
-                </button>
+                </Link>
             </div >
-
-            <TerritoryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </>
     );
 }

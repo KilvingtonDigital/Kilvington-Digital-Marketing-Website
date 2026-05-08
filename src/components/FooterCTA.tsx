@@ -1,12 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import Link from 'next/link';
 import styles from '../app/page.module.css'; // Adjust path if needed
-import TerritoryModal from './TerritoryModal';
 
 export default function FooterCTA() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
     return (
         <>
             <section id="contact" className={`section ${styles.footerCta}`}>
@@ -15,16 +12,14 @@ export default function FooterCTA() {
                     <p className={styles.footerText}>
                         Check availability for your industry and location. We only accept one partner per territory.
                     </p>
-                    <button
+                    <Link
+                        href="/territory-check"
                         className={`btn ${styles.ctaButton}`}
-                        onClick={() => setIsModalOpen(true)}
                     >
                         SECURE YOUR TERRITORY
-                    </button>
+                    </Link>
                 </div>
             </section>
-
-            <TerritoryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </>
     );
 }

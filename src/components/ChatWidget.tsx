@@ -7,7 +7,7 @@ export default function ChatWidget() {
   const pathname = usePathname();
 
   // Pages with forms or data collection where the widget should not be loaded
-  const excludedPaths = ['/contact'];
+  const excludedPaths = ['/contact', '/territory-check'];
 
   const isExcluded = pathname ? excludedPaths.some(path => pathname.startsWith(path)) : false;
 
