@@ -12,12 +12,12 @@ export default function FooterCTA() {
                     <p className={styles.footerText}>
                         Check availability for your industry and location. We only accept one partner per territory.
                     </p>
-                    <Link
+                    <a
                         href="/territory-check"
                         className={`btn ${styles.ctaButton}`}
                     >
                         SECURE YOUR TERRITORY
-                    </Link>
+                    </a>
                 </div>
             </section>
         </>

@@ -51,12 +51,12 @@ export default function Navigation() {
                         >
                             Case Studies
                         </Link>
-                        <Link
+                        <a
                             href="/territory-check"
                             className={styles.cta}
                         >
                             Territory Check
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -83,13 +83,13 @@ export default function Navigation() {
                 <Link href="/about" className={styles.mobileLink} onClick={toggleMobileMenu}>
                     ABOUT
                 </Link>
-                <Link
+                <a
                     href="/territory-check"
                     className={`${styles.mobileLink} ${styles.mobileCta}`}
                     onClick={toggleMobileMenu}
                 >
                     CHECK AVAILABILITY
-                </Link>
+                </a>
             </div >
         </>
     );
