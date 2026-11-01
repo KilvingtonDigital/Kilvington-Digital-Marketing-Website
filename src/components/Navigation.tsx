@@ -45,6 +45,9 @@ export default function Navigation() {
                         >
                             Capabilities
                         </Link>
+                        <Link href="/fractional-ai-leadership" className={`${styles.link} ${pathname === '/fractional-ai-leadership' ? styles.activeLink : ''}`}>
+                            Fractional AI
+                        </Link>
                         <Link
                             href="/case-studies"
                             className={`${styles.link} ${pathname === '/case-studies' ? styles.activeLink : ''}`}
@@ -76,6 +79,9 @@ export default function Navigation() {
                 </Link>
                 <Link href="/industries" className={styles.mobileLink} onClick={toggleMobileMenu}>
                     INDUSTRIES
+                </Link>
+                <Link href="/fractional-ai-leadership" className={styles.mobileLink} onClick={toggleMobileMenu}>
+                    FRACTIONAL AI LEADERSHIP
                 </Link>
                 <Link href="/case-studies" className={styles.mobileLink} onClick={toggleMobileMenu}>
                     CASE STUDIES
