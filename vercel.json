@@ -1,8 +1,13 @@
 {
   "redirects": [
     {
+      "source": "/fractional-ai-leadership",
+      "destination": "https://www.kilvingtondigital.com/services/fractional-ai-leadership",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
-      "destination": "https://kilvingtondigital.com/$1",
+      "destination": "https://www.kilvingtondigital.com/marketing",
       "permanent": true
     }
   ]
