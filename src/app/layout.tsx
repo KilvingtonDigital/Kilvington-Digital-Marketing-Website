@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Oswald, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "./globals.css";
@@ -48,6 +49,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ChatWidget />
+        <Analytics />
       </body>
     </html>
   );
